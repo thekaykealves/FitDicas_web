@@ -18,7 +18,7 @@ export const FoodContainer = styled('main', {
   },
 
   a: {
-    top: '100px',
+    top: '50px',
     position: 'absolute',
     left: '10rem',
     border: 'none',
@@ -28,6 +28,13 @@ export const FoodContainer = styled('main', {
       opacity: 0.7,
     },
   },
+
+  div: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
 })
 
 export const DefictAndAfictCaloricContainer = styled('div', {

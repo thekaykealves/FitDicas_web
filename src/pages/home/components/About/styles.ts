@@ -2,7 +2,7 @@ import { styled } from '@/styles'
 
 export const AboutContainer = styled('div', {
   overflow: 'hidden',
-  paddingBlock: '1rem',
+  marginBlock: '5rem',
   position: 'relative',
   display: 'flex',
   alignItems: 'center',

@@ -24,7 +24,7 @@ import * as Accordion from '@radix-ui/react-accordion'
 
 export const BestFoodsContainer = styled('div', {
   backgroundColor: '$primary-color',
-  paddingBlock: '2rem',
+  paddingBlock: '5rem',
   borderBottom: '5px solid $bg-color',
   display: 'flex',
   flexDirection: 'column',

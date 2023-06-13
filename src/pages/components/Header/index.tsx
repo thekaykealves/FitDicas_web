@@ -1,4 +1,5 @@
 import {
+  Div,
   HeaderContainer,
   HeaderContent,
   HeaderItem,
@@ -8,11 +9,34 @@ import {
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import Link from 'next/link'
 
+import { ShoppingCartComponent } from '../ShoppingCart'
+import { useShoppingCart } from 'use-shopping-cart'
+import { ArrowLeft } from 'phosphor-react'
+import { useRouter } from 'next/router'
+
 export function Header() {
+  const { asPath } = useRouter()
+  const { cartCount } = useShoppingCart()
+
+  const quantity  = cartCount! === 0
+  const isVisible = quantity ? true : false
+
   return (
     <div>
-      <HeaderContainer>
-        <h1>FitDicas 💪</h1>
+      <HeaderContainer className='container'>
+        {asPath !== '/' ? (
+          <Link href="/">
+            <ArrowLeft size={32} />
+          </Link>
+        ) : null}
+
+        <Div>
+          <h1>FitDicas 💪</h1>
+        </Div>
+
+        <Div>
+          <ShoppingCartComponent visible={isVisible} />
+        </Div>
       </HeaderContainer>
 
       <NavigationMenu.Root>

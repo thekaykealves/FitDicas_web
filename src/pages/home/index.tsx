@@ -19,6 +19,7 @@ export default function Home() {
     {
       slides: {
         perView: 1,
+        spacing: 1,
       },
       loop: true,
     },
@@ -58,8 +59,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div>
-        <Header />
-
         <HomeContainer className="container">
           <HomeTextContainer>
             <h1>Vem ser Fitness !</h1>

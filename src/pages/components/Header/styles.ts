@@ -14,15 +14,31 @@ const fadeOut = keyframes({
 export const HeaderContainer = styled('header', {
   height: '2rem',
   backgroundColor: '$bg-color',
+  padding: '3rem',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center',
-  padding: '3rem',
+  position: 'relative',
 
   h1: {
     fontFamily: 'Open Sans, sans-serif',
     fontWeight: 800,
+    position: 'absolute',
+    left: '50%',
+    top: '50%',
+    transform: 'translate(-50%, -50%)'
   },
+
+  a: {
+    color: '$white',
+
+    '&:hover': {
+      opacity: 0.8,
+    },
+  }
+})
+
+export const Div = styled('div', {
+  marginLeft: 'auto',
 })
 
 export const HeaderList = styled(NavigationMenu.List, {
@@ -30,7 +46,6 @@ export const HeaderList = styled(NavigationMenu.List, {
   alignItems: 'flex-start',
   gap: '0.5rem',
   listStyle: 'none',
-  borderBottom: '5px solid $primary-color',
 })
 
 export const HeaderItem = styled(NavigationMenu.Item, {

@@ -2,7 +2,7 @@ import { styled } from '@/styles'
 
 export const BenefitsContainer = styled('div', {
   width: '100%',
-  paddingBlock: '1rem',
+  marginBlock: '5rem',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',

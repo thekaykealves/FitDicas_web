@@ -1,5 +1,7 @@
 import { keyframes, styled } from '@/styles'
 
+import * as Toast from '@radix-ui/react-toast';
+
 export const SupplementsContainer = styled('main', {
   width: '100%',
   display: 'flex',
@@ -16,18 +18,13 @@ export const SupplementsContainer = styled('main', {
     fontSize: '20px',
     width: '75%',
   },
-
-  a: {
-    top: '100px',
-    position: 'absolute',
-    left: '10rem',
-    border: 'none',
-    cursor: 'pointer',
-
-    '&:hover': {
-      opacity: 0.7,
-    },
-  },
+  
+  div: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
 })
 
 export const ProductCatalog = styled('div', {
@@ -107,9 +104,12 @@ export const Products = styled('section', {
 })
 
 export const CardsProductContainer = styled('div', {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(3, 1fr)',
-  gap: '2rem',
+  width: '100%',
+  display: 'flex',
+  flexWrap: 'wrap',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '1rem',
 })
 
 export const CardProduct = styled('div', {
@@ -130,7 +130,7 @@ export const CardProduct = styled('div', {
     objectFit: 'contain',
   },
 
-  a: {
+  button: {
     width: '100%',
     textAlign: 'center',
     textDecoration: 'none',
@@ -148,4 +148,56 @@ export const CardProduct = styled('div', {
       cursor: 'pointer',
     },
   },
+})
+
+// Toast
+const slideOut = keyframes({
+  from: {
+    transform: 'translateX(0px)',
+  },
+
+  to: {
+    transform: 'translateX(300px)',
+  }
+})
+
+const slideIn = keyframes({
+  from: {
+    transform: 'translateX(1000px)',
+  },
+
+  to: {
+    transform: 'translateX(-300px)',
+  }
+})
+
+export const ToastRoot = styled(Toast.Root, {
+  backgroundColor: '$secondary-color',
+  paddingInline: '10px',
+  paddingBlock: '30px',
+  overflow: 'hidden',
+  
+  '&[data-state="open"]': {
+    animation: `${slideIn} 100ms ease-in`
+  },
+
+  '&[data-state="closed"]': {
+    animation: `${slideOut} 100ms ease-in`,
+  },
+})
+
+export const ToastViewport = styled(Toast.Viewport, {
+  position: 'fixed',
+  bottom: 30,
+  right: 30,
+  borderRadius: 8,
+  textAlign: 'center',
+  gap: 10,
+  width: '350px',
+  zIndex: 1,
+  outline: 'none',
+  fontWeight: 800,
+  fontFamily: 'Open Sans, sans-serif',
+  listStyle: 'none',
+  overflow: 'hidden',
 })

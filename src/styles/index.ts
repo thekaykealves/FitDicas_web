@@ -12,10 +12,10 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      'bg-color': '#0A4D68',
-      'primary-color': '#088395',
-      'secondary-color': '#05BFDB',
-      'tertiary-color': '#00FFCA',
+      'bg-color': '#0E2954',
+      'primary-color': '#1F6E8C',
+      'secondary-color': '#2E8A99',
+      'tertiary-color': '#73BBC9',
 
       white: '#FFFFFF',
       black: '#000000',

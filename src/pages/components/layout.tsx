@@ -2,6 +2,7 @@ import { BackToTopButton } from '@/styles/global'
 import { Footer } from './Footer'
 import { ArrowUp } from 'phosphor-react'
 import { useEffect, useState } from 'react'
+import { Header } from './Header'
 
 export function Layout({ children }: any) {
   const [buttonVisibility, setButtonVisibility] = useState(false)
@@ -26,6 +27,7 @@ export function Layout({ children }: any) {
 
   return (
     <>
+      <Header />
       <div>{children}</div>
       <BackToTopButton
         href="#"

@@ -65,18 +65,3 @@ export const Circle = styled('div', {
   height: 300,
   position: 'absolute',
 })
-
-// botão de voltar para o topo
-export const BackToTopButton = styled('a', {
-  backgroundColor: '$tertiary-color',
-  color: '$bg-color',
-  position: 'fixed',
-  right: '4rem',
-  bottom: '4rem',
-  fontSize: '1.3rem',
-  lineHeight: 0,
-  padding: '0.7rem',
-  clipPath: 'circle()',
-  transition: '0.3s',
-  cursor: 'auto',
-})

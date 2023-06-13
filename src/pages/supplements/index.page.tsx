@@ -1,9 +1,6 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import { GetServerSideProps } from 'next'
 import Image from 'next/image'
-
-import { ArrowLeft } from 'phosphor-react'
+import { GetServerSideProps } from 'next'
 
 import {
   Card,
@@ -13,10 +10,16 @@ import {
   ProductCatalog,
   Products,
   SupplementsContainer,
+  ToastRoot,
+  ToastViewport,
 } from './styles'
 
 import { stripe } from '@/lib/stripe'
 import Stripe from 'stripe'
+
+import * as Toast from '@radix-ui/react-toast';
+import { useState } from 'react'
+import { useShoppingCart } from 'use-shopping-cart'
 
 interface SupplementsProps {
   products: {
@@ -29,6 +32,14 @@ interface SupplementsProps {
 }
 
 export default function Supplements({ products }: SupplementsProps) {
+  const { addItem, removeItem } = useShoppingCart()
+  const [openToast, setOpenToast] = useState(false);
+
+  function addProductInCart(item: any) {
+    setOpenToast(true)
+    addItem(item)
+  }
+  
   return (
     <>
       <Head>
@@ -36,21 +47,19 @@ export default function Supplements({ products }: SupplementsProps) {
       </Head>
 
       <SupplementsContainer className="container">
-        <Link href="/">
-          <ArrowLeft size={32} color="white" />
-        </Link>
+        <div>
+          <h1>Suplementação</h1>
 
-        <h1>Suplementação</h1>
-
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro quos
-          nemo cumque adipisci laudantium unde error tempora, omnis quas aut
-          voluptatibus asperiores non et, in, at sed ducimus amet ex! Lorem
-          ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem,
-          officiis dolorum. Ducimus nulla accusantium libero debitis! Voluptatum
-          pariatur minus, non sapiente, adipisci facilis maiores quidem neque
-          omnis, praesentium similique iure!
-        </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro quos
+            nemo cumque adipisci laudantium unde error tempora, omnis quas aut
+            voluptatibus asperiores non et, in, at sed ducimus amet ex! Lorem
+            ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem,
+            officiis dolorum. Ducimus nulla accusantium libero debitis! Voluptatum
+            pariatur minus, non sapiente, adipisci facilis maiores quidem neque
+            omnis, praesentium similique iure!
+          </p>
+        </div>
       </SupplementsContainer>
 
       <ProductCatalog className="container" id="aboutSupplements">
@@ -89,15 +98,29 @@ export default function Supplements({ products }: SupplementsProps) {
         <CardsProductContainer>
           {products.map((product) => {
             return (
-              <CardProduct key={product.id}>
-                <Image src={product.imageUrl} width={500} height={500} alt="" />
-                <span>{product.name}</span>
-                <strong>{product.price}</strong>
-                <a href="/">Comprar agora</a>
-              </CardProduct>
+              <Toast.Provider swipeDirection='right'>
+                <CardProduct key={product.id}>
+                  <Image src={product.imageUrl} width={500} height={500} alt="" />
+                  <span>{product.name}</span>
+                  <strong>{product.price}</strong>
+                  <button
+                    onClick={(product) => addProductInCart(product)}
+                  >
+                    Adicionar ao carrinho
+                  </button>
+                </CardProduct>
+
+                <ToastRoot open={openToast} onOpenChange={setOpenToast} duration={2000}>
+                  <Toast.Title>Item adicionado ao carrinho de compras!</Toast.Title>
+                </ToastRoot>
+
+                <ToastViewport />
+              </Toast.Provider>
             )
           })}
         </CardsProductContainer>
+
+        
       </Products>
     </>
   )

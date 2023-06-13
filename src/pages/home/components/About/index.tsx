@@ -33,7 +33,7 @@ export function About() {
             <AboutIcon>
               <Clock />
             </AboutIcon>
-            <strong>Ter uma rotina</strong>
+            <strong>Um bom sono</strong>
           </div>
         </AboutIconsWrapper>
 

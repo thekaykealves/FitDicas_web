@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Link from 'next/link'
+
 import {
   CardDiet,
   CardsContainer,
@@ -6,8 +8,9 @@ import {
   DietContainer,
   FoodContainer,
 } from './styles'
+
 import { ArrowLeft, ArrowRight } from 'phosphor-react'
-import Link from 'next/link'
+
 import { BestFoods } from './bestFoods'
 
 export default function Food() {
@@ -18,18 +21,19 @@ export default function Food() {
       </Head>
 
       <FoodContainer className="container">
-        <Link href="/">
-          <ArrowLeft size={32} color="white" />
-        </Link>
+        <div>
+          <h1>Alimentação + saudável</h1>
 
-        <h1>Alimentação + saudável</h1>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore illo
-          ipsum quaerat quis quas recusandae fuga id maiores cum, sapiente
-          voluptate voluptatem repudiandae hic expedita, blanditiis nostrum eum
-          vitae placeat?
-        </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore illo
+            ipsum quaerat quis quas recusandae fuga id maiores cum, sapiente
+            voluptate voluptatem repudiandae hic expedita, blanditiis nostrum eum
+            vitae placeat?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quasi ullam, officiis voluptates minus, nam tempora qui omnis quae, 
+            reiciendis voluptatibus similique! Repellendus sed sit ipsa temporibus,
+            aut tenetur. Amet, libero!
+          </p>
+        </div>
       </FoodContainer>
 
       <DefictAndAfictCaloricContainer
