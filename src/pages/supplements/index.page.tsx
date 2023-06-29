@@ -1,127 +1,80 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { GetServerSideProps } from 'next'
+
+import Stripe from 'stripe'
+import { stripe } from '@/lib/stripe'
+
+import { SupplementsProps } from './@types/Supplements'
 
 import {
   Card,
-  CardProduct,
   CardsContainer,
-  CardsProductContainer,
   ProductCatalog,
-  Products,
+  ProductsContainer,
   SupplementsContainer,
-  ToastRoot,
-  ToastViewport,
 } from './styles'
 
-import { stripe } from '@/lib/stripe'
-import Stripe from 'stripe'
-
-import * as Toast from '@radix-ui/react-toast';
-import { useState } from 'react'
-import { useShoppingCart } from 'use-shopping-cart'
-
-interface SupplementsProps {
-  products: {
-    id: string
-    name: string
-    price: string
-    imageUrl: string
-    description: string
-  }[]
-}
+import { Products } from './components/Products'
+import { Layout } from '../components/layout'
 
 export default function Supplements({ products }: SupplementsProps) {
-  const { addItem, removeItem } = useShoppingCart()
-  const [openToast, setOpenToast] = useState(false);
-
-  function addProductInCart(item: any) {
-    setOpenToast(true)
-    addItem(item)
-  }
-  
   return (
     <>
       <Head>
         <title>Suplementos | FitDicas</title>
       </Head>
 
-      <SupplementsContainer className="container">
-        <div>
-          <h1>Suplementação</h1>
-
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro quos
-            nemo cumque adipisci laudantium unde error tempora, omnis quas aut
-            voluptatibus asperiores non et, in, at sed ducimus amet ex! Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem,
-            officiis dolorum. Ducimus nulla accusantium libero debitis! Voluptatum
-            pariatur minus, non sapiente, adipisci facilis maiores quidem neque
-            omnis, praesentium similique iure!
-          </p>
-        </div>
-      </SupplementsContainer>
-
-      <ProductCatalog className="container" id="aboutSupplements">
-        <h4>Suplementos</h4>
-
-        <CardsContainer>
-          <Card>
-            <strong>Whey Protein</strong>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              velit impedit doloremque. Eveniet quod, eius tempore rem odit
-              alias blanditiis? Nisi, minus eveniet accusamus harum commodi
-              voluptatem quod praesentium dolorum!
-            </p>
-
-            <span>+ Massa muscular 💪</span>
-          </Card>
-          <Card>
-            <strong>Creatina</strong>
+      <Layout>
+        <SupplementsContainer className="container margin-top">
+          <div>
+            <h1>Suplementação</h1>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus ex corporis magnam possimus labore fugit nihil
-              asperiores atque ipsum libero aliquid praesentium dolorum, iste ea
-              quo placeat, rerum facilis veniam?
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
+              quos nemo cumque adipisci laudantium unde error tempora, omnis
+              quas aut voluptatibus asperiores non et, in, at sed ducimus amet
+              ex! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatem, officiis dolorum. Ducimus nulla accusantium libero
+              debitis! Voluptatum pariatur minus, non sapiente, adipisci facilis
+              maiores quidem neque omnis, praesentium similique iure!
             </p>
+          </div>
+        </SupplementsContainer>
 
-            <span>+ Força 💪</span>
-          </Card>
-        </CardsContainer>
-      </ProductCatalog>
+        <ProductCatalog className="container" id="aboutSupplements">
+          <CardsContainer>
+            <Card>
+              <strong>Whey Protein</strong>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                velit impedit doloremque. Eveniet quod, eius tempore rem odit
+                alias blanditiis? Nisi, minus eveniet accusamus harum commodi
+                voluptatem quod praesentium dolorum!
+              </p>
 
-      <Products id="productCatalog">
-        <h3>Catálogo de produtos 👇</h3>
+              <span>+ Massa muscular 💪</span>
+            </Card>
+            <Card>
+              <strong>Creatina</strong>
 
-        <CardsProductContainer>
-          {products.map((product) => {
-            return (
-              <Toast.Provider swipeDirection='right'>
-                <CardProduct key={product.id}>
-                  <Image src={product.imageUrl} width={500} height={500} alt="" />
-                  <span>{product.name}</span>
-                  <strong>{product.price}</strong>
-                  <button
-                    onClick={(product) => addProductInCart(product)}
-                  >
-                    Adicionar ao carrinho
-                  </button>
-                </CardProduct>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus ex corporis magnam possimus labore fugit nihil
+                asperiores atque ipsum libero aliquid praesentium dolorum, iste
+                ea quo placeat, rerum facilis veniam?
+              </p>
 
-                <ToastRoot open={openToast} onOpenChange={setOpenToast} duration={2000}>
-                  <Toast.Title>Item adicionado ao carrinho de compras!</Toast.Title>
-                </ToastRoot>
+              <span>+ Força 💪</span>
+            </Card>
+          </CardsContainer>
+        </ProductCatalog>
 
-                <ToastViewport />
-              </Toast.Provider>
-            )
-          })}
-        </CardsProductContainer>
+        <ProductsContainer id="productCatalog">
+          <h3>Catálogo de produtos 👇</h3>
 
-        
-      </Products>
+          <Products products={products} />
+        </ProductsContainer>
+      </Layout>
     </>
   )
 }
@@ -143,6 +96,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
       }).format(price.unit_amount! / 100),
       imageUrl: product.images[0],
       description: product.description,
+      defaultPriceId: price.id,
     }
   })
 

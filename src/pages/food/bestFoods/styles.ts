@@ -2,35 +2,8 @@ import { keyframes, styled } from '@/styles'
 
 import * as Accordion from '@radix-ui/react-accordion'
 
-// const slideDown = keyframes({
-//   from: {
-//     height: 0,
-//   },
-
-//   to: {
-//     height: '100%',
-//   },
-// })
-
-// const slideUp = keyframes({
-//   from: {
-//     height: '100%',
-//   },
-
-//   to: {
-//     height: 0,
-//   },
-// })
-
-export const BestFoodsContainer = styled('div', {
+export const BestFoodsTitle = styled('div', {
   backgroundColor: '$primary-color',
-  paddingBlock: '5rem',
-  borderBottom: '5px solid $bg-color',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  gap: '32px',
-  height: '100%',
 
   h3: {
     textAlign: 'center',
@@ -38,11 +11,23 @@ export const BestFoodsContainer = styled('div', {
   },
 })
 
+export const BestFoodsContainer = styled('div', {
+  paddingBlock: '5rem',
+  borderBottom: '5px solid $bg-color',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  gap: '32px',
+  height: '100%',
+
+  transition: 'width 0.5s, height 0.5s linear',
+})
+
 export const AccordionContainer = styled('div', {
   display: 'flex',
   justifyContent: 'space-between',
 
-  transition: 'all 1s linear',
+  transition: 'width 0.5s, height 0.5s linear',
 })
 
 export const AccordionTrigger = styled(Accordion.Trigger, {
@@ -94,6 +79,7 @@ const opacityUp = keyframes({
 
   to: {
     opacity: 0,
+    transform: 'translateY(-100px)',
   },
 })
 

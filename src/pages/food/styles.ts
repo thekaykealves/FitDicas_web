@@ -34,7 +34,7 @@ export const FoodContainer = styled('main', {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-  }
+  },
 })
 
 export const DefictAndAfictCaloricContainer = styled('div', {
@@ -51,7 +51,7 @@ export const CardsContainer = styled('div', {
   justifyContent: 'center',
   gap: '5rem',
   width: '100%',
-  height: '700px',
+  height: '600px',
   borderRadius: 8,
 
   backgroundColor: '$primary-color',
@@ -68,7 +68,7 @@ const toFloat = keyframes({
 
 export const CardDiet = styled('div', {
   width: '300px',
-  height: '500px',
+  height: '400px',
   padding: '1rem',
   display: 'flex',
   flexDirection: 'column',

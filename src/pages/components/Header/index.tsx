@@ -1,30 +1,31 @@
-import {
-  Div,
-  HeaderContainer,
-  HeaderContent,
-  HeaderItem,
-  HeaderList,
-} from './styles'
-
-import * as NavigationMenu from '@radix-ui/react-navigation-menu'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 import { ShoppingCartComponent } from '../ShoppingCart'
+
+import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import { useShoppingCart } from 'use-shopping-cart'
 import { ArrowLeft } from 'phosphor-react'
-import { useRouter } from 'next/router'
+
+import {
+  HeaderContainer,
+  HeaderContent,
+  HeaderItem,
+  Div,
+  HeaderList,
+  HeaderWrapper,
+} from './styles'
 
 export function Header() {
   const { asPath } = useRouter()
   const { cartCount } = useShoppingCart()
 
-  const quantity  = cartCount! === 0
-  const isVisible = quantity ? true : false
+  const isProductInCart = cartCount! > 0
 
   return (
-    <div>
-      <HeaderContainer className='container'>
-        {asPath !== '/' ? (
+    <HeaderWrapper>
+      <HeaderContainer className="container">
+        {asPath !== '/' && asPath !== '/#' ? (
           <Link href="/">
             <ArrowLeft size={32} />
           </Link>
@@ -35,7 +36,7 @@ export function Header() {
         </Div>
 
         <Div>
-          <ShoppingCartComponent visible={isVisible} />
+          <ShoppingCartComponent visible={isProductInCart} />
         </Div>
       </HeaderContainer>
 
@@ -162,6 +163,6 @@ export function Header() {
           </HeaderItem>
         </HeaderList>
       </NavigationMenu.Root>
-    </div>
+    </HeaderWrapper>
   )
 }

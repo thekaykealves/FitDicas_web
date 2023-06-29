@@ -1,15 +1,8 @@
 import { useEffect, useState } from 'react'
+
 import { TableFoodsContainer } from './styles'
 
-interface FoodProps {
-  meats: {
-    id: string
-    name: string
-    quantity: string
-    protein: string
-    type: string
-  }[]
-}
+import { FoodProps } from '../../@types/Food'
 
 export function TableFoods() {
   const [foods, setFoods] = useState<FoodProps>()

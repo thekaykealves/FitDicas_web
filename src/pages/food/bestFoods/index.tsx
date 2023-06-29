@@ -5,6 +5,7 @@ import {
   AccordionContent,
   AccordionTrigger,
   BestFoodsContainer,
+  BestFoodsTitle,
 } from './styles'
 
 import * as Accordion from '@radix-ui/react-accordion'
@@ -44,44 +45,45 @@ export function BestFoods() {
   // console.log(beffs)
 
   return (
-    <BestFoodsContainer className="container" id="bestFoods">
-      <h3>Melhores Alimentos para ganho de massa muscular</h3>
+    <BestFoodsTitle>
+      <BestFoodsContainer className="container" id="bestFoods">
+        <h3>Melhores Alimentos para ganho de massa muscular</h3>
+        <Accordion.Root type="single" defaultValue="item-1" collapsible>
+          <AccordionContainer>
+            <Accordion.Item value="1">
+              <Accordion.Header>
+                <AccordionTrigger>
+                  <Image src={carneImg} alt="" />
+                  <span>Carnes</span>
+                </AccordionTrigger>
+              </Accordion.Header>
+              <AccordionContent>
+                <TableFoods />
+              </AccordionContent>
+            </Accordion.Item>
 
-      <Accordion.Root type="single" defaultValue="item-1" collapsible>
-        <AccordionContainer>
-          <Accordion.Item value="1">
-            <Accordion.Header>
-              <AccordionTrigger>
-                <Image src={carneImg} alt="" />
-                <span>Carnes</span>
-              </AccordionTrigger>
-            </Accordion.Header>
-            <AccordionContent>
-              <TableFoods />
-            </AccordionContent>
-          </Accordion.Item>
+            <Accordion.Item value="2">
+              <Accordion.Header>
+                <AccordionTrigger>
+                  <Image src={frutasImg} alt="" />
+                  <span>Frutas</span>
+                </AccordionTrigger>
+              </Accordion.Header>
+              <AccordionContent>teste</AccordionContent>
+            </Accordion.Item>
 
-          <Accordion.Item value="2">
-            <Accordion.Header>
-              <AccordionTrigger>
-                <Image src={frutasImg} alt="" />
-                <span>Frutas</span>
-              </AccordionTrigger>
-            </Accordion.Header>
-            <AccordionContent>teste</AccordionContent>
-          </Accordion.Item>
-
-          <Accordion.Item value="3">
-            <Accordion.Header>
-              <AccordionTrigger>
-                <Image src={suplementosImg} alt="" />
-                <span>Suplementos</span>
-              </AccordionTrigger>
-            </Accordion.Header>
-            <AccordionContent>teste</AccordionContent>
-          </Accordion.Item>
-        </AccordionContainer>
-      </Accordion.Root>
-    </BestFoodsContainer>
+            <Accordion.Item value="3">
+              <Accordion.Header>
+                <AccordionTrigger>
+                  <Image src={suplementosImg} alt="" />
+                  <span>Suplementos</span>
+                </AccordionTrigger>
+              </Accordion.Header>
+              <AccordionContent>teste</AccordionContent>
+            </Accordion.Item>
+          </AccordionContainer>
+        </Accordion.Root>
+      </BestFoodsContainer>
+    </BestFoodsTitle>
   )
 }

@@ -1,4 +1,4 @@
-import { keyframes, styled } from "@/styles";
+import { keyframes, styled } from '@/styles'
 
 const slideIn = keyframes({
   from: {
@@ -7,13 +7,14 @@ const slideIn = keyframes({
 
   to: {
     transform: 'translateX(0px)',
-  }
+  },
 })
 
 export const SidebarContainer = styled('div', {
   position: 'fixed',
   right: 0,
   bottom: 0,
+  top: 0,
   width: '30%',
   height: '100vh',
   zIndex: '5',
@@ -30,28 +31,11 @@ export const SidebarWrapper = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
-  gap: '50px',
+  gap: '10px',
   alignItems: 'center',
 
-  span: {
+  strong: {
     fontSize: '20px',
-  },
-
-  button: {
-    width: '100%',
-    color: '$white',
-    backgroundColor: '$primary-color',
-    padding: '20px',
-    border: 0,
-    borderRadius: 8,
-    fontSize: '18px',
-
-    transition: 'all 200ms linear',
-
-    '&:hover': {
-      filter: 'brightness(2)',
-      cursor: 'pointer',
-    },
   },
 
   svg: {
@@ -66,12 +50,48 @@ export const SidebarWrapper = styled('div', {
   },
 })
 
+export const SidebarButton = styled('button', {
+  variants: {
+    color: {
+      red: {
+        backgroundColor: 'red',
+
+        '&:hover': {
+          opacity: 0.8,
+        },
+      },
+    },
+  },
+
+  color: '$white',
+  width: '100%',
+  padding: '20px',
+  border: 0,
+  borderRadius: 8,
+  fontSize: '18px',
+  backgroundColor: '$primary-color',
+  marginTop: '10px',
+
+  transition: 'all 200ms linear',
+
+  '&:disabled': {
+    opacity: 0.6,
+    cursor: 'not-allowed',
+  },
+
+  '&:not(:disabled):hover': {
+    filter: 'brightness(2)',
+    cursor: 'pointer',
+  },
+})
+
 export const SidebarProducts = styled('div', {
   width: '100%',
   height: '100%',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'start',
+  gap: '10px',
+  justifyContent: 'space-between',
 })
 
 export const Product = styled('div', {
@@ -81,25 +101,43 @@ export const Product = styled('div', {
   borderRadius: 8,
   display: 'grid',
   gridTemplateColumns: '1fr 1fr',
-  marginLeft: 0,
+  padding: '10px',
 
   img: {
-    width: '100%',
-    height: '100%',
+    width: '150px',
+    height: '150px',
     borderBottomLeftRadius: 8,
     borderTopLeftRadius: 8,
   },
 
-  div: {
-    padding: '10px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    whiteSpace: 'nowrap',
+  '> div': {
+    display: 'grid',
+    gridTemplateColumns: '1fr',
+    gridTemplateAreas: '1fr 1fr',
 
-    span: {
+    strong: {
       fontSize: '16px',
-    }
-  }
+      overflow: 'hidden',
+    },
+  },
+})
+
+export const ProductPrice = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+
+  button: {
+    all: 'unset',
+    fontSize: '20px',
+    backgroundColor: '$tertiary-color',
+    borderRadius: 8,
+    padding: '0 10px',
+    color: '$white',
+    fontWeight: 'bold',
+
+    '&:hover': {
+      opacity: 0.8,
+    },
+  },
 })

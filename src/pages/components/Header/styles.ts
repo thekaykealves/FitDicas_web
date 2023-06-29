@@ -11,7 +11,17 @@ const fadeOut = keyframes({
   to: { opacity: 0 },
 })
 
-export const HeaderContainer = styled('header', {
+export const HeaderWrapper = styled('header', {
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  right: 0,
+  zIndex: '100',
+
+  transition: 'backgroundColor 0.5s ease-in-out',
+})
+
+export const HeaderContainer = styled('div', {
   height: '2rem',
   backgroundColor: '$bg-color',
   padding: '3rem',
@@ -25,7 +35,7 @@ export const HeaderContainer = styled('header', {
     position: 'absolute',
     left: '50%',
     top: '50%',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
   },
 
   a: {
@@ -34,7 +44,7 @@ export const HeaderContainer = styled('header', {
     '&:hover': {
       opacity: 0.8,
     },
-  }
+  },
 })
 
 export const Div = styled('div', {
@@ -43,8 +53,6 @@ export const Div = styled('div', {
 
 export const HeaderList = styled(NavigationMenu.List, {
   display: 'flex',
-  alignItems: 'flex-start',
-  gap: '0.5rem',
   listStyle: 'none',
 })
 
@@ -62,9 +70,6 @@ export const HeaderItem = styled(NavigationMenu.Item, {
     fontSize: 16,
     fontWeight: 'bold',
     cursor: 'pointer',
-
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
 
     transition: '100ms linear',
 

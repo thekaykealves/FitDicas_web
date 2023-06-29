@@ -26,6 +26,10 @@ export const globalStyles = globalCss({
     paddingInline: '10rem',
     height: 'calc(100vh - 13rem)',
   },
+
+  '.margin-top': {
+    marginTop: '7.813rem',
+  },
 })
 
 // botão de voltar para o topo
