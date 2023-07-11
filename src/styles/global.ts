@@ -24,7 +24,13 @@ export const globalStyles = globalCss({
 
   '.container': {
     paddingInline: '10rem',
+    paddingBlock: '6rem',
     height: 'calc(100vh - 13rem)',
+
+    '@breakpoint1': {
+      paddingBlock: '3rem',
+      paddingInline: '2rem',
+    },
   },
 
   '.margin-top': {
@@ -45,4 +51,13 @@ export const BackToTopButton = styled('a', {
   clipPath: 'circle()',
   transition: '0.3s',
   cursor: 'auto',
+})
+
+export const Separator = styled('div', {
+  height: '1px',
+  background: `linear-gradient(
+    270deg,
+      $primary-color 0%,
+      $bg-color 100%
+  )`,
 })

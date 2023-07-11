@@ -16,6 +16,16 @@ export const AboutContainer = styled('div', {
     top: 0,
     left: -150,
   },
+
+  '@breakpoint1': {
+    'div#left-circle': {
+      left: -120,
+    },
+
+    'div#right-circle': {
+      right: -120,
+    },
+  },
 })
 
 export const AboutWrapper = styled('div', {
@@ -23,6 +33,10 @@ export const AboutWrapper = styled('div', {
   alignItems: 'center',
   justifyContent: 'space-between',
   height: '100%',
+
+  '@breakpoint1': {
+    flexDirection: 'column',
+  },
 })
 
 export const AboutIconsWrapper = styled('div', {
@@ -41,6 +55,11 @@ export const AboutIconsWrapper = styled('div', {
     alignItems: 'center',
     justifyContent: 'center',
     gap: '1rem',
+  },
+
+  '@breakpoint1': {
+    width: '100%',
+    padding: '1rem',
   },
 })
 
@@ -70,5 +89,10 @@ export const AboutText = styled('div', {
 
   p: {
     fontSize: '22px',
+  },
+
+  '@breakpoint1': {
+    width: '100%',
+    textAlign: 'center',
   },
 })

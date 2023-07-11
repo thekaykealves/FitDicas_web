@@ -13,7 +13,6 @@ export const BestFoodsTitle = styled('div', {
 
 export const BestFoodsContainer = styled('div', {
   paddingBlock: '5rem',
-  borderBottom: '5px solid $bg-color',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
@@ -28,6 +27,11 @@ export const AccordionContainer = styled('div', {
   justifyContent: 'space-between',
 
   transition: 'width 0.5s, height 0.5s linear',
+
+  '@breakpoint1': {
+    flexDirection: 'column',
+    gap: '3rem',
+  },
 })
 
 export const AccordionTrigger = styled(Accordion.Trigger, {

@@ -46,10 +46,6 @@ export function About() {
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt ipsa
             incidunt placeat explicabo veritatis nesciunt est voluptate sed
             minus aliquam molestias dolorem nisi, eos, ipsam beatae sint quam
-            debitis? Autem. Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Aperiam porro facilis sequi magnam laboriosam molestias
-            impedit explicabo iste enim, minus cum delectus. Sunt cumque labore
-            nostrum necessitatibus amet, culpa dolore?
           </p>
         </AboutText>
       </AboutWrapper>

@@ -11,6 +11,11 @@ export const HomeContainer = styled('main', {
   gap: '3rem',
   position: 'relative',
   overflow: 'hidden',
+
+  '@breakpoint1': {
+    flexDirection: 'column',
+    paddingTop: '3rem',
+  },
 })
 
 const toWrite = keyframes({
@@ -41,6 +46,16 @@ export const HomeTextContainer = styled('div', {
   span: {
     fontSize: '22px',
   },
+
+  '@breakpoint1': {
+    width: '100%',
+    alignItems: 'center',
+
+    span: {
+      textAlign: 'center',
+      fontSize: '20px',
+    },
+  },
 })
 
 export const HomeImages = styled('div', {
@@ -56,6 +71,20 @@ export const HomeImages = styled('div', {
     borderBottomLeftRadius: '30%',
     objectFit: 'cover',
   },
+
+  '@breakpoint1': {
+    position: 'absolute',
+    height: '50%',
+    width: '100%',
+    bottom: 0,
+    right: 0,
+    left: 0,
+
+    img: {
+      width: '100%',
+      borderRadius: 8,
+    },
+  },
 })
 
 export const Circle = styled('div', {
@@ -64,4 +93,9 @@ export const Circle = styled('div', {
   width: 300,
   height: 300,
   position: 'absolute',
+
+  '@breakpoint1': {
+    width: 150,
+    height: 150,
+  },
 })

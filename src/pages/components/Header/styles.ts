@@ -19,11 +19,13 @@ export const HeaderWrapper = styled('header', {
   zIndex: '100',
 
   transition: 'backgroundColor 0.5s ease-in-out',
+
+  backgroundColor: 'rgba(14, 41, 84, 0.9)',
+  backdropFilter: 'blur(10px)',
 })
 
 export const HeaderContainer = styled('div', {
   height: '2rem',
-  backgroundColor: '$bg-color',
   padding: '3rem',
   display: 'flex',
   alignItems: 'center',
@@ -49,6 +51,10 @@ export const HeaderContainer = styled('div', {
 
 export const Div = styled('div', {
   marginLeft: 'auto',
+
+  a: {
+    textDecoration: 'none',
+  },
 })
 
 export const HeaderList = styled(NavigationMenu.List, {
@@ -65,7 +71,7 @@ export const HeaderItem = styled(NavigationMenu.Item, {
     padding: '0.3rem',
     width: '100%',
     border: 0,
-    backgroundColor: '$bg-color',
+    backgroundColor: 'transparent',
     color: '$white',
     fontSize: 16,
     fontWeight: 'bold',
@@ -75,6 +81,12 @@ export const HeaderItem = styled(NavigationMenu.Item, {
 
     '&[data-state="open"]': {
       filter: 'brightness(1.10)',
+    },
+  },
+
+  '@breakpoint1': {
+    button: {
+      fontSize: '14px',
     },
   },
 })
@@ -93,7 +105,8 @@ export const HeaderContent = styled(NavigationMenu.Content, {
     gap: '0.3rem',
     flexDirection: 'column',
     listStyle: 'none',
-    backgroundColor: '$bg-color',
+    backgroundColor: 'rgba(14, 41, 84, 0.9)',
+    backdropFilter: 'blur(150px)',
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
     padding: '1rem',
@@ -122,4 +135,13 @@ export const HeaderContent = styled(NavigationMenu.Content, {
   },
 
   '&[data-state="closed"]': { animation: `${fadeOut} 200ms ease` },
+
+  '@breakpoint1': {
+    fontSize: '14px',
+
+    ul: {
+      padding: '0.5rem',
+      gap: '1rem',
+    },
+  },
 })

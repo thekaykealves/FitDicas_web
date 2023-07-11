@@ -23,6 +23,10 @@ export const SidebarContainer = styled('div', {
   borderRadius: 8,
 
   animation: `${slideIn} 500ms linear`,
+
+  '@breakpoint1': {
+    width: '100%',
+  },
 })
 
 export const SidebarWrapper = styled('div', {

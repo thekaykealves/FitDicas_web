@@ -2,19 +2,24 @@ import { styled } from '@/styles'
 
 export const BenefitsContainer = styled('div', {
   width: '100%',
-  marginBlock: '5rem',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
+  paddingBlock: '6rem',
+  height: '100%',
 
   span: {
     fontSize: '32px',
     fontWeight: 'bold',
-    marginBottom: '90px',
+    marginBottom: '3rem',
   },
 
   '&:hover': {
     transition: '300ms linear',
+  },
+
+  '@breakpoint1': {
+    height: 'auto',
   },
 })
 
@@ -23,6 +28,12 @@ export const BenefitsWrapper = styled('div', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
+
+  '@breakpoint1': {
+    height: '100%',
+    flexDirection: 'column',
+    gap: '1rem',
+  },
 })
 
 export const BenefitBox = styled('div', {
@@ -55,5 +66,12 @@ export const BenefitBox = styled('div', {
 
   '&:hover': {
     transform: 'scale(1.1)',
+  },
+
+  '@breakpoint1': {
+    fontSize: '14px',
+    strong: {
+      fontSize: '16px',
+    },
   },
 })

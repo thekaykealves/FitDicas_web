@@ -15,35 +15,9 @@ import frutasImg from '../../../assets/frutas.avif'
 import suplementosImg from '../../../assets/sulementos.avif'
 
 import { TableFoods } from './components/TableFoods'
-// import carnesImg from '../../../assets/carnes.webp'
-// import { useEffect, useState } from 'react'
-
-// interface FoodProps {
-//   meat: {
-//     name: string
-//     quantity: string
-//     protein: string
-//     type: 'Bovina' | 'Aves' | 'Suína' | 'Peixe'
-//   }
-//   fruits: {
-//     name: string
-//     quantity: string
-//   }
-// }
+import { Separator } from '@/styles/global'
 
 export function BestFoods() {
-  // const URL = 'http://localhost:3000'
-
-  // const [foods, setFoods] = useState<FoodProps[]>([])
-
-  // useEffect(() => {
-  //   fetch(`${URL}/api/foods`)
-  //     .then((response) => response.json())
-  //     .then((foods) => setFoods(foods))
-  // }, [])
-
-  // console.log(beffs)
-
   return (
     <BestFoodsTitle>
       <BestFoodsContainer className="container" id="bestFoods">
@@ -58,7 +32,7 @@ export function BestFoods() {
                 </AccordionTrigger>
               </Accordion.Header>
               <AccordionContent>
-                <TableFoods />
+                <TableFoods type="meats" />
               </AccordionContent>
             </Accordion.Item>
 
@@ -69,7 +43,9 @@ export function BestFoods() {
                   <span>Frutas</span>
                 </AccordionTrigger>
               </Accordion.Header>
-              <AccordionContent>teste</AccordionContent>
+              <AccordionContent>
+                <TableFoods type="fruits" />
+              </AccordionContent>
             </Accordion.Item>
 
             <Accordion.Item value="3">
@@ -79,11 +55,15 @@ export function BestFoods() {
                   <span>Suplementos</span>
                 </AccordionTrigger>
               </Accordion.Header>
-              <AccordionContent>teste</AccordionContent>
+              <AccordionContent>
+                <TableFoods type="supplements" />
+              </AccordionContent>
             </Accordion.Item>
           </AccordionContainer>
         </Accordion.Root>
       </BestFoodsContainer>
+
+      <Separator />
     </BestFoodsTitle>
   )
 }

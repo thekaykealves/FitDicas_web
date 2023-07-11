@@ -32,7 +32,9 @@ export function Header() {
         ) : null}
 
         <Div>
-          <h1>FitDicas 💪</h1>
+          <h1>
+            <Link href="/">FitDicas 💪</Link>
+          </h1>
         </Div>
 
         <Div>
@@ -75,32 +77,32 @@ export function Header() {
             <HeaderContent>
               <ul>
                 <li>
-                  <Link prefetch={false} href="/">
+                  <Link prefetch={false} href="/exercises/biceps">
                     Bíceps
                   </Link>
                 </li>
                 <li>
-                  <Link prefetch={false} href="/">
+                  <Link prefetch={false} href="/exercises/triceps">
                     Tríceps
                   </Link>
                 </li>
                 <li>
-                  <Link prefetch={false} href="/">
+                  <Link prefetch={false} href="/exercises/back">
                     Costas
                   </Link>
                 </li>
                 <li>
-                  <Link prefetch={false} href="/">
+                  <Link prefetch={false} href="/exercises/breastplate">
                     Peitoral
                   </Link>
                 </li>
                 <li>
-                  <Link prefetch={false} href="/">
+                  <Link prefetch={false} href="/exercises/legs">
                     Pernas
                   </Link>
                 </li>
                 <li>
-                  <Link prefetch={false} href="/">
+                  <Link prefetch={false} href="/abdomen">
                     Abdômen
                   </Link>
                 </li>

@@ -1,9 +1,8 @@
 export interface FoodProps {
-  meats: {
-    id: string
-    name: string
-    quantity: string
-    protein: string
-    type: string
-  }[]
+  id: string
+  name: string
+  quantity: string
+  protein: string
+  calories: string
+  type: string
 }

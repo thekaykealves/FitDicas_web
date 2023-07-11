@@ -21,4 +21,7 @@ export const {
       black: '#000000',
     },
   },
+  media: {
+    breakpoint1: '(max-width: 768px)',
+  },
 })

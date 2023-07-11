@@ -13,13 +13,13 @@ import 'keen-slider/keen-slider.min.css'
 import alimentacaoImg from '../../assets/alimentacao.avif'
 import exercicioImg from '../../assets/exercicio.avif'
 import rotinaImg from '../../assets/rotina.avif'
+import { Separator } from '@/styles/global'
 
 export default function Home() {
   const [sliderRef] = useKeenSlider<HTMLDivElement>(
     {
       slides: {
         perView: 1,
-        spacing: 1,
       },
       loop: true,
     },
@@ -30,12 +30,14 @@ export default function Home() {
         function clearNextTimeout() {
           clearTimeout(timeout)
         }
+
         function nextTimeout() {
           clearTimeout(timeout)
           timeout = setTimeout(() => {
             slider.next()
           }, 3000)
         }
+
         slider.on('created', () => {
           slider.container.addEventListener('mouseover', () => {
             clearNextTimeout()
@@ -88,7 +90,9 @@ export default function Home() {
             </HomeImages>
           </HomeContainer>
 
+          <Separator />
           <About />
+          <Separator />
           <Benefits />
         </div>
       </Layout>

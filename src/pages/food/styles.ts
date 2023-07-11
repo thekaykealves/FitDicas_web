@@ -17,23 +17,29 @@ export const FoodContainer = styled('main', {
     width: '75%',
   },
 
-  a: {
-    top: '50px',
-    position: 'absolute',
-    left: '10rem',
-    border: 'none',
-    cursor: 'pointer',
-
-    '&:hover': {
-      opacity: 0.7,
-    },
-  },
-
   div: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  '@breakpoint1': {
+    height: '100%',
+    paddingBlock: '3rem',
+
+    h1: {
+      fontSize: '30px',
+      margin: 0,
+    },
+
+    p: {
+      fontSize: '20px',
+    },
+
+    div: {
+      gap: '3rem',
+    },
   },
 })
 
@@ -55,6 +61,12 @@ export const CardsContainer = styled('div', {
   borderRadius: 8,
 
   backgroundColor: '$primary-color',
+
+  '@breakpoint1': {
+    flexDirection: 'column',
+    gap: '3rem',
+    height: '500px',
+  },
 })
 
 const toFloat = keyframes({
@@ -86,6 +98,14 @@ export const CardDiet = styled('div', {
     fontWeight: 'bold',
     animation: `${toFloat} 2s ease-in-out infinite`,
   },
+
+  '@breakpoint1': {
+    height: '200px',
+
+    span: {
+      fontSize: '18px',
+    },
+  },
 })
 
 export const DietContainer = styled('div', {
@@ -105,5 +125,25 @@ export const DietContainer = styled('div', {
   p: {
     fontSize: '18px',
     width: '50%',
+  },
+
+  '@breakpoint1': {
+    paddingBlock: '3rem',
+    height: '100%',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    gap: '3rem',
+
+    h2: {
+      fontSize: '30px',
+
+      svg: {
+        transform: 'rotate(90deg)',
+      },
+    },
+
+    p: {
+      width: '100%',
+    },
   },
 })

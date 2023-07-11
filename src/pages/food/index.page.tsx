@@ -12,6 +12,7 @@ import { ArrowRight } from 'phosphor-react'
 
 import { BestFoods } from './bestFoods'
 import { Layout } from '../components/layout'
+import { Separator } from '@/styles/global'
 
 export default function Food() {
   return (
@@ -29,13 +30,11 @@ export default function Food() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
               illo ipsum quaerat quis quas recusandae fuga id maiores cum,
               sapiente voluptate voluptatem repudiandae hic expedita, blanditiis
-              nostrum eum vitae placeat?Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quasi ullam, officiis voluptates minus, nam
-              tempora qui omnis quae, reiciendis voluptatibus similique!
-              Repellendus sed sit ipsa temporibus, aut tenetur. Amet, libero!
             </p>
           </div>
         </FoodContainer>
+
+        <Separator />
 
         <DefictAndAfictCaloricContainer
           className="container"
@@ -44,11 +43,10 @@ export default function Food() {
           <CardsContainer>
             <CardDiet>
               <strong>Superávit</strong>
+
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                velit impedit doloremque. Eveniet quod, eius tempore rem odit
-                alias blanditiis? Nisi, minus eveniet accusamus harum commodi
-                voluptatem quod praesentium dolorum!
+                velit impedit doloremque.
               </p>
 
               <span>+ Massa muscular 💪</span>
@@ -58,15 +56,17 @@ export default function Food() {
 
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatibus ex corporis magnam possimus labore fugit nihil
-                asperiores atque ipsum libero aliquid praesentium dolorum, iste
-                ea quo placeat, rerum facilis veniam?
+                Consequatur eos laboriosam tenetur sit cum ex voluptate expedita
+                numquam officia iste non possimus a incidunt, maiores excepturi
+                aperiam sapiente mollitia totam!
               </p>
 
               <span>- Gordura ♨️</span>
             </CardDiet>
           </CardsContainer>
         </DefictAndAfictCaloricContainer>
+
+        <Separator />
 
         <DietContainer className="container" id="Diet">
           <h2>

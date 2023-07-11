@@ -20,4 +20,21 @@ export const FooterContainer = styled('footer', {
       fontSize: '32px',
     },
   },
+
+  '@breakpoint1': {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    gap: '1rem',
+
+    'div:first-child': {
+      a: {
+        fontSize: '30px',
+      },
+
+      p: {
+        display: 'none',
+      },
+    },
+  },
 })
