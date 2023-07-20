@@ -85,7 +85,6 @@ export const Card = styled('div', {
 })
 
 export const ProductsContainer = styled('section', {
-  marginTop: '50px',
   width: '100%',
   backgroundColor: '$tertiary-color',
   paddingInline: '10rem',

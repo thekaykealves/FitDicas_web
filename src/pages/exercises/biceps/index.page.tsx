@@ -1,11 +1,10 @@
-import { Layout } from '../../components/layout'
+import { Muscles } from '@/pages/components/Muscles'
 
-export default function Exercises() {
-  return (
-    <Layout>
-      <div className="container margin-top">
-        <h1>Biceps</h1>
-      </div>
-    </Layout>
-  )
+import bicepsImg from '../../../assets/muscles/biceps.png'
+import useExercises from '@/hook/useExercises'
+
+export default function Biceps() {
+  const { exercises } = useExercises('biceps')
+
+  return <Muscles name="Biceps" image={bicepsImg.src} exercises={exercises} />
 }

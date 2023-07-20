@@ -1,11 +1,10 @@
-import { Layout } from '../../components/layout'
+import { Muscles } from '@/pages/components/Muscles'
+
+import tricepsImg from '../../../assets/muscles/triceps.png'
+import useExercises from '@/hook/useExercises'
 
 export default function Triceps() {
-  return (
-    <Layout>
-      <div className="container margin-top">
-        <h1>Triceps</h1>
-      </div>
-    </Layout>
-  )
+  const { exercises } = useExercises('triceps')
+
+  return <Muscles name="Tríceps" image={tricepsImg.src} exercises={exercises} />
 }

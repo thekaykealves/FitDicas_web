@@ -1,11 +1,12 @@
-import { Layout } from '../../components/layout'
+import { Muscles } from '@/pages/components/Muscles'
 
-export default function Exercises() {
+import breastplateImg from '../../../assets/muscles/peitoral.png'
+import useExercises from '@/hook/useExercises'
+
+export default function Breastplate() {
+  const { exercises } = useExercises('breastplate')
+
   return (
-    <Layout>
-      <div className="container margin-top">
-        <h1>Peitoral</h1>
-      </div>
-    </Layout>
+    <Muscles name="Peitoral" image={breastplateImg.src} exercises={exercises} />
   )
 }

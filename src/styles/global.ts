@@ -51,6 +51,11 @@ export const BackToTopButton = styled('a', {
   clipPath: 'circle()',
   transition: '0.3s',
   cursor: 'auto',
+
+  '@breakpoint1': {
+    right: '2rem',
+    bottom: '2rem',
+  },
 })
 
 export const Separator = styled('div', {

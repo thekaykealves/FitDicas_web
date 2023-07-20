@@ -16,17 +16,16 @@ export const BestFoodsContainer = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
-  gap: '32px',
   height: '100%',
 
-  transition: 'width 0.5s, height 0.5s linear',
+  '> h3': {
+    marginBottom: '80px',
+  },
 })
 
 export const AccordionContainer = styled('div', {
   display: 'flex',
   justifyContent: 'space-between',
-
-  transition: 'width 0.5s, height 0.5s linear',
 
   '@breakpoint1': {
     flexDirection: 'column',
@@ -35,8 +34,8 @@ export const AccordionContainer = styled('div', {
 })
 
 export const AccordionTrigger = styled(Accordion.Trigger, {
-  width: '250px',
-  height: '250px',
+  width: '300px',
+  height: '300px',
   border: 'none',
   borderRadius: 8,
   backgroundColor: '$bg-color',
@@ -92,7 +91,9 @@ export const AccordionContent = styled(Accordion.Content, {
   borderRadius: 8,
   padding: 10,
   overflow: 'hidden',
-  transition: 'all 200ms ease',
+  width: '100%',
+  maxWidth: '300px',
+  maxHeight: '100%',
 
   '&[data-state="open"]': {
     animation: `${opacityDown} 500ms forwards`,

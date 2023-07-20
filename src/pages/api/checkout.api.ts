@@ -1,6 +1,17 @@
 import { stripe } from '@/lib/stripe'
 import { NextApiRequest, NextApiResponse } from 'next'
-import { Products } from './@types/Products'
+
+export interface Products {
+  products: {
+    id: string
+    name: string
+    imageUrl: string
+    price: number
+    defaultPriceId: string
+    description: string
+    quantity: number
+  }[]
+}
 
 export default async function handler(
   req: NextApiRequest,

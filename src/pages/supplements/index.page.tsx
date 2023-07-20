@@ -16,6 +16,7 @@ import {
 
 import { Products } from './components/Products'
 import { Layout } from '../components/layout'
+import { Separator } from '@/styles/global'
 
 export default function Supplements({ products }: SupplementsProps) {
   return (
@@ -40,6 +41,8 @@ export default function Supplements({ products }: SupplementsProps) {
             </p>
           </div>
         </SupplementsContainer>
+
+        <Separator />
 
         <ProductCatalog className="container" id="aboutSupplements">
           <CardsContainer>

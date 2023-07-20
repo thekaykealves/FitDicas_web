@@ -102,7 +102,7 @@ export function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link prefetch={false} href="/abdomen">
+                  <Link prefetch={false} href="/exercises/abdomen">
                     Abdômen
                   </Link>
                 </li>
@@ -115,7 +115,7 @@ export function Header() {
             <HeaderContent>
               <ul>
                 <li>
-                  <Link prefetch={false} href="/">
+                  <Link prefetch={false} href="/focus">
                     Como ter + foco
                   </Link>
                 </li>
@@ -128,7 +128,7 @@ export function Header() {
             <HeaderContent>
               <ul>
                 <li>
-                  <Link prefetch={false} href="/">
+                  <Link prefetch={false} href="/routine">
                     Como planejar uma rotina
                   </Link>
                 </li>

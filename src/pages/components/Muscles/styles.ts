@@ -1,6 +1,6 @@
 import { styled } from '@/styles'
 
-export const BackContainer = styled('main', {
+export const Container = styled('div', {
   height: '100%',
   display: 'flex',
   flexDirection: 'column',
@@ -14,7 +14,7 @@ export const BackContainer = styled('main', {
   },
 })
 
-export const ExercisesForBack = styled('div', {
+export const Exercises = styled('div', {
   height: '100%,',
 
   h4: {

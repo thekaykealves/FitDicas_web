@@ -1,9 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { backExercisesProps } from './@types/back-exercises'
+
+interface backExercisesProps {
+  back: {
+    id: number
+    name: string
+    specificMuscle: 'dorsal' | 'trapezio' | 'miolo' | 'lombar'
+  }[]
+}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const exercises: backExercisesProps = {
-    backMuscles: [
+    back: [
       {
         id: 1,
         name: 'Puxada Frente',
