@@ -1,4 +1,4 @@
-# FitDicas 💪
+<h1 align="center">FitDicas 💪</h1>
 
 ## Sobre o projeto 🔥
 
