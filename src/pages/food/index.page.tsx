@@ -27,9 +27,10 @@ export default function Food() {
             <h1>Alimentação + saudável</h1>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-              illo ipsum quaerat quis quas recusandae fuga id maiores cum,
-              sapiente voluptate voluptatem repudiandae hic expedita, blanditiis
+              Hoje em dia sabemos que para ter uma alimentação saudável, não
+              basta apenas evitar os alimentos de má qualidade nutricional, como
+              os ultraprocessados, precisamos incluir alimentos que possuem
+              nutrientes capazes de promover a saúde.
             </p>
           </div>
         </FoodContainer>
@@ -45,8 +46,9 @@ export default function Food() {
               <strong>Superávit</strong>
 
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                velit impedit doloremque.
+                superávit calórico é o consumo de uma quantidade de calorias
+                superior as que você utiliza ao final de todas as suas
+                atribuições diárias. Ou seja, é consumir mais do que gasta.
               </p>
 
               <span>+ Massa muscular 💪</span>
@@ -55,8 +57,9 @@ export default function Food() {
               <strong>Déficit</strong>
 
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequatur eos laboriosam
+                Déficit calórico é o gasto de calorias superior ao consumo de
+                calorias que você ingere durante o seu dia. Ou seja, é gastar
+                mais do que consome.
               </p>
 
               <span>- Gordura ♨️</span>
@@ -73,14 +76,13 @@ export default function Food() {
           </h2>
 
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
-            doloremque neque facere, illum voluptatem a quidem atque cupiditate
-            nulla officia, voluptatum nisi soluta impedit, perferendis commodi
-            obcaecati. Eligendi, ea amet. Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit. Ad voluptatibus, totam voluptatum
-            dolorem est eos rerum modi earum, reiciendis nobis doloribus?
-            Provident praesentium voluptas nemo rem aspernatur itaque culpa!
-            Unde.
+            Dieta é o conjunto de alimentos e bebidas ingeridos usualmente por
+            uma pessoa. A palavra "dieta" tem origem no latim diaeta, que vem do
+            grego “díaita”, que significa "modo de vida". A dieta é portanto um
+            hábito e representa uma forma de viver. Por vezes, o termo é usado
+            para fazer referência aos regimes alimentares especiais para perder
+            peso ou para combater determinadas doenças, ainda que estes casos
+            representem alterações da dieta e não propriamente a dieta em si.
           </p>
         </DietContainer>
 

@@ -31,10 +31,9 @@ export default function Supplements({ products }: SupplementsProps) {
             <h1>Suplementação</h1>
 
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
-              quos nemo cumque adipisci laudantium unde error tempora, omnis
-              quas aut voluptatibus asperiores non et, in, at sed ducimus amet
-              ex! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Os suplementos funcionam como um complemento da alimentação. Na
+              maioria dos casos, são indicados para pessoas que apresentam uma
+              carência muito grande de determinado nutriente
             </p>
           </div>
         </SupplementsContainer>
@@ -46,8 +45,9 @@ export default function Supplements({ products }: SupplementsProps) {
             <Card>
               <strong>Whey Protein</strong>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                velit impedit doloremque. Eveniet quod, eius tempore rem odit
+                O whey protein é rico em proteína, substância responsável pela
+                reconstrução das nossas fibras musculares. Seu papel é auxiliar
+                na regeneração do corpo após a prática de um exercício físico.
               </p>
 
               <span>+ Massa muscular 💪</span>
@@ -56,8 +56,9 @@ export default function Supplements({ products }: SupplementsProps) {
               <strong>Creatina</strong>
 
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatibus ex corporis magnam possimus labore fugit nihil
+                A creatina melhora na recuperação dos músculos, aumenta o volume
+                muscular e potencializa o ganho de força. Considerado um dos
+                melhores suplementos do mundo.
               </p>
 
               <span>+ Força 💪</span>

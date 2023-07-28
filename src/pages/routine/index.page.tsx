@@ -27,10 +27,11 @@ export default function Routine() {
 
           <div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-              voluptates voluptatibus obcaecati non animi quibusdam maxime,
-              perspiciatis commodi temporibus, aspernatur debitis tempore id
-              harum eum esse necessitatibus a quod quas?
+              Você tem dificuldade de manter a rotina na academia? <br></br>
+              Sabemos que manter uma rotina de treino regular não é uma tarefa
+              fácil, porém é fator fundamental para melhorar a saúde de forma
+              geral, além de minimizar a possibilidade de as pessoas
+              desenvolverem doenças crônicas.
             </p>
           </div>
         </RoutineContainer>
@@ -43,32 +44,26 @@ export default function Routine() {
           <RoutineStep>
             <div>
               <Step>
-                <strong>1. Definir horários</strong>
+                <strong>1. Planeja sua semana</strong>
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  beatae dolorum repudiandae ab nesciunt adipisci ratione quo
-                  laborum delectus laudantium iure, tempore corporis at quis
-                  labore quam temporibus autem ut.
+                  Organize os dias e horários de treino, sua alimentação, seu
+                  sono e os dias de descanso.
+                </p>
+              </Step>
+              <Step>
+                <strong>2. Mantenha frequência</strong>
+                <p>
+                  A constância é fator primordial para obter resultados
+                  satisfatórios.
                 </p>
               </Step>
 
               <Step>
-                <strong>2. Definir metas diárias</strong>
+                <strong>3. Seja paciente</strong>
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  beatae dolorum repudiandae ab nesciunt adipisci ratione quo
-                  laborum delectus laudantium iure, tempore corporis at quis
-                  labore quam temporibus autem ut.
-                </p>
-              </Step>
-
-              <Step>
-                <strong>3. Definir metas diárias</strong>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  beatae dolorum repudiandae ab nesciunt adipisci ratione quo
-                  laborum delectus laudantium iure, tempore corporis at quis
-                  labore quam temporibus autem ut.
+                  Treine sua mente para se adaptar a esse novo estilo de vida e
+                  tenha paciência, pois o trabalho é constante e o resultado vem
+                  com o tempo.
                 </p>
               </Step>
             </div>

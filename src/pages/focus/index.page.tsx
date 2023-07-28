@@ -21,10 +21,11 @@ export default function Focus() {
 
           <div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-              voluptates voluptatibus obcaecati non animi quibusdam maxime,
-              perspiciatis commodi temporibus, aspernatur debitis tempore id
-              harum eum esse necessitatibus a quod quas?
+              O erro de muitas pessoas ao tentarem ter uma vida mais saudável
+              através de exercícios físicos, é a falta de disciplina e foco em
+              honrar seus compromissos de responsabilidades nos treinos.
+              Construir bons hábitos para melhorar o foco é essencial até mesmo
+              para quem deseja usar bem o tempo para ter uma vida mais saudável.
             </p>
           </div>
         </FocusContainer>
@@ -39,30 +40,29 @@ export default function Focus() {
               <Step>
                 <strong>1. Definir horários</strong>
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  beatae dolorum repudiandae ab nesciunt adipisci ratione quo
-                  laborum delectus laudantium iure, tempore corporis at quis
-                  labore quam temporibus autem ut.
+                  Sempre tente, adaptar um horário ideal e que se encaixe em sua
+                  rotina para ir para a academia ou até mesmo fazer exercícios
+                  em casa.
                 </p>
               </Step>
 
               <Step>
                 <strong>2. Definir metas diárias</strong>
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  beatae dolorum repudiandae ab nesciunt adipisci ratione quo
-                  laborum delectus laudantium iure, tempore corporis at quis
-                  labore quam temporibus autem ut.
+                  Defina pequenas metas durante o seu dia para realiza-las antes
+                  de tal horário que você mesmo definir. Isso te ajudará a ter
+                  um dia + produtivo e no fim do dia, ter a sensação que cumpriu
+                  suas metas.
                 </p>
               </Step>
 
               <Step>
-                <strong>3. Definir metas diárias</strong>
+                <strong>3. Ter disciplina</strong>
                 <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  beatae dolorum repudiandae ab nesciunt adipisci ratione quo
-                  laborum delectus laudantium iure, tempore corporis at quis
-                  labore quam temporibus autem ut.
+                  Nunca deixe de ter disciplina, a falta de motivação é muito
+                  comum e todos vão acordar algum dia desmotivado. Mas, não
+                  deixe que essa "falta de motivação" atrapalhe você a alcançar
+                  seus objetivos.
                 </p>
               </Step>
             </div>
