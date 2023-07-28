@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Layout } from '../layout'
 import { Separator } from '@/styles/global'
-import { Container, Exercises } from './styles'
+import { Container, Exercises, ListExercises } from './styles'
 
 interface ExercisesProps {
   id: number
@@ -26,15 +26,17 @@ export function Muscles({ name, image, exercises }: MusclesProps) {
       <Separator />
 
       <Exercises className="container">
-        <h4>Exercicios que trabalha esses músculos em específico 👇</h4>
+        <h4>Exercícios que trabalha esses músculos em específico 👇</h4>
 
-        {exercises.map((exercise) => {
-          return (
-            <ul key={exercise.id}>
-              <li>{exercise.name}</li>
-            </ul>
-          )
-        })}
+        <ListExercises>
+          {exercises.map((exercise) => {
+            return (
+              <ul key={exercise.id}>
+                <li>{exercise.name}</li>
+              </ul>
+            )
+          })}
+        </ListExercises>
       </Exercises>
     </Layout>
   )

@@ -18,7 +18,7 @@ export const BenefitsContainer = styled('div', {
     transition: '300ms linear',
   },
 
-  '@breakpoint1': {
+  '@mobile': {
     height: 'auto',
   },
 })
@@ -29,7 +29,7 @@ export const BenefitsWrapper = styled('div', {
   alignItems: 'center',
   justifyContent: 'space-between',
 
-  '@breakpoint1': {
+  '@mobile': {
     height: '100%',
     flexDirection: 'column',
     gap: '1rem',
@@ -68,7 +68,7 @@ export const BenefitBox = styled('div', {
     transform: 'scale(1.1)',
   },
 
-  '@breakpoint1': {
+  '@mobile': {
     fontSize: '14px',
     strong: {
       fontSize: '16px',

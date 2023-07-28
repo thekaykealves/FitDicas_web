@@ -21,7 +21,7 @@ export const FooterContainer = styled('footer', {
     },
   },
 
-  '@breakpoint1': {
+  '@mobile': {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',

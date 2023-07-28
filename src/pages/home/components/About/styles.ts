@@ -17,7 +17,7 @@ export const AboutContainer = styled('div', {
     left: -150,
   },
 
-  '@breakpoint1': {
+  '@mobile': {
     'div#left-circle': {
       left: -120,
     },
@@ -34,7 +34,7 @@ export const AboutWrapper = styled('div', {
   justifyContent: 'space-between',
   height: '100%',
 
-  '@breakpoint1': {
+  '@mobile': {
     flexDirection: 'column',
   },
 })
@@ -57,7 +57,7 @@ export const AboutIconsWrapper = styled('div', {
     gap: '1rem',
   },
 
-  '@breakpoint1': {
+  '@mobile': {
     width: '100%',
     padding: '1rem',
   },
@@ -91,7 +91,7 @@ export const AboutText = styled('div', {
     fontSize: '22px',
   },
 
-  '@breakpoint1': {
+  '@mobile': {
     width: '100%',
     textAlign: 'center',
   },

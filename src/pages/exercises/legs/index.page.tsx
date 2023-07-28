@@ -1,10 +1,20 @@
+import Head from 'next/head'
+
 import { Muscles } from '@/pages/components/Muscles'
+import useExercises from '@/hook/useExercises'
 
 import legsImg from '../../../assets/muscles/pernas.jpg'
-import useExercises from '@/hook/useExercises'
 
 export default function Exercises() {
   const { exercises } = useExercises('legs')
 
-  return <Muscles name="Pernas" image={legsImg.src} exercises={exercises} />
+  return (
+    <>
+      <Head>
+        <title>Pernas | FitDicas</title>
+      </Head>
+
+      <Muscles name="Pernas" image={legsImg.src} exercises={exercises} />
+    </>
+  )
 }

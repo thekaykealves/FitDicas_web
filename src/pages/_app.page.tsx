@@ -1,6 +1,7 @@
-import { globalStyles } from '@/styles/global'
 import type { AppProps } from 'next/app'
 import { CartProvider } from 'use-shopping-cart'
+
+import { globalStyles } from '@/styles/global'
 
 globalStyles()
 

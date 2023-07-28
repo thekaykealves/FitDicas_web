@@ -5,15 +5,15 @@ import { About } from './components/About'
 import { Benefits } from './components/Benefitis'
 import { Layout } from '../components/layout'
 
-import { HomeContainer, HomeImages, HomeTextContainer } from './styles'
-
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
+
+import { HomeContainer, HomeImages, HomeTextContainer } from './styles'
+import { Separator } from '@/styles/global'
 
 import alimentacaoImg from '../../assets/alimentacao.avif'
 import exercicioImg from '../../assets/exercicio.avif'
 import rotinaImg from '../../assets/rotina.avif'
-import { Separator } from '@/styles/global'
 
 export default function Home() {
   const [sliderRef] = useKeenSlider<HTMLDivElement>(
@@ -58,8 +58,8 @@ export default function Home() {
     <>
       <Head>
         <title>Home | FitDicas</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
       <Layout>
         <div>
           <HomeContainer className="container margin-top">

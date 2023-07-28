@@ -2,7 +2,7 @@ import { styled } from '@/styles'
 
 export const FocusContainer = styled('div', {
   background:
-    'linear-gradient(356deg, rgba(46,138,153,1) 0%, rgba(14,41,84,1) 70%)',
+    'linear-gradient(356deg, rgba(0, 0, 0, 1) 0%, rgba(21, 0, 80, 1) 70%)',
 
   h1: {
     textAlign: 'center',
@@ -14,12 +14,16 @@ export const FocusContainer = styled('div', {
     fontSize: '1.5rem',
     textAlign: 'center',
   },
+
+  '@mobile': {
+    height: '100%',
+  },
 })
 
 export const FocusSteps = styled('div', {
   height: '100%',
   background:
-    'linear-gradient(356deg, rgba(14,41,84,1) 0%, rgba(46,138,153,1) 70%)',
+    'linear-gradient(356deg, rgba(21, 0, 80, 1) 0%, rgba(0, 0, 0, 1) 70%)',
 
   h2: {
     fontSize: '2rem',
@@ -31,7 +35,7 @@ export const FocusStep = styled('div', {
   alignItems: 'center',
   justifyContent: 'center',
 
-  '@breakpoint1': {
+  '@mobile': {
     flexDirection: 'column',
   },
 })
@@ -44,7 +48,15 @@ export const Step = styled('div', {
     fontSize: '1.5rem',
   },
 
-  '@breakpoint1': {
+  '@mobile': {
     width: '100%',
+  },
+})
+
+export const Hero = styled('div', {
+  img: {
+    width: '100%',
+    height: '500px',
+    objectFit: 'contain',
   },
 })

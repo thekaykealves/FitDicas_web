@@ -12,7 +12,7 @@ export const HomeContainer = styled('main', {
   position: 'relative',
   overflow: 'hidden',
 
-  '@breakpoint1': {
+  '@mobile': {
     flexDirection: 'column',
     paddingTop: '3rem',
   },
@@ -47,7 +47,7 @@ export const HomeTextContainer = styled('div', {
     fontSize: '22px',
   },
 
-  '@breakpoint1': {
+  '@mobile': {
     width: '100%',
     alignItems: 'center',
 
@@ -72,7 +72,7 @@ export const HomeImages = styled('div', {
     objectFit: 'cover',
   },
 
-  '@breakpoint1': {
+  '@mobile': {
     position: 'absolute',
     height: '50%',
     width: '100%',
@@ -94,7 +94,7 @@ export const Circle = styled('div', {
   height: 300,
   position: 'absolute',
 
-  '@breakpoint1': {
+  '@mobile': {
     width: 150,
     height: 150,
   },

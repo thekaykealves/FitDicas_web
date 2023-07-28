@@ -8,15 +8,16 @@ export const SupplementsContainer = styled('main', {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
+  textAlign: 'center',
 
   h1: {
-    fontSize: '40px',
+    fontSize: '3rem',
     marginBottom: '100px',
   },
 
   p: {
-    fontSize: '20px',
-    width: '75%',
+    fontSize: '1.5rem',
+    width: '100%',
   },
 
   div: {
@@ -24,6 +25,18 @@ export const SupplementsContainer = styled('main', {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  '@mobile': {
+    height: '100%',
+
+    h1: {
+      margin: 0,
+    },
+
+    div: {
+      gap: '3rem',
+    },
   },
 })
 
@@ -51,6 +64,12 @@ export const CardsContainer = styled('div', {
   borderRadius: 8,
 
   backgroundColor: '$tertiary-color',
+
+  '@mobile': {
+    flexDirection: 'column',
+    gap: '3 rem',
+    height: '500px',
+  },
 })
 
 const toFloat = keyframes({
@@ -72,6 +91,7 @@ export const Card = styled('div', {
   justifyContent: 'space-around',
   backgroundColor: '$bg-color',
   borderRadius: 8,
+  gap: '1rem',
 
   strong: {
     fontSize: '25px',
@@ -81,6 +101,14 @@ export const Card = styled('div', {
     fontSize: '20px',
     fontWeight: 'bold',
     animation: `${toFloat} 2s ease-in-out infinite`,
+  },
+
+  '@mobile': {
+    height: '200px',
+
+    span: {
+      fontSize: '18px',
+    },
   },
 })
 
@@ -99,6 +127,12 @@ export const ProductsContainer = styled('section', {
     textAlign: 'center',
     fontSize: '30px',
     marginBottom: '1rem',
+  },
+
+  '@mobile': {
+    h3: {
+      whiteSpace: 'nowrap',
+    },
   },
 })
 

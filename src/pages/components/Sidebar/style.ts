@@ -24,7 +24,7 @@ export const SidebarContainer = styled('div', {
 
   animation: `${slideIn} 500ms linear`,
 
-  '@breakpoint1': {
+  '@mobile': {
     width: '100%',
   },
 })
@@ -94,34 +94,39 @@ export const SidebarProducts = styled('div', {
   height: '100%',
   display: 'flex',
   flexDirection: 'column',
-  gap: '10px',
   justifyContent: 'space-between',
 })
 
 export const Product = styled('div', {
   width: '100%',
-  height: '150px',
   backgroundColor: '$primary-color',
   borderRadius: 8,
   display: 'grid',
   gridTemplateColumns: '1fr 1fr',
   padding: '10px',
+  alignItems: 'center',
+  marginBottom: '10px',
 
   img: {
     width: '150px',
     height: '150px',
-    borderBottomLeftRadius: 8,
-    borderTopLeftRadius: 8,
+    objectFit: 'cover',
+
+    '@mobile': {
+      width: '100px',
+      height: '100px',
+      alignSelf: 'center',
+    },
   },
 
   '> div': {
-    display: 'grid',
-    gridTemplateColumns: '1fr',
-    gridTemplateAreas: '1fr 1fr',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
 
     strong: {
       fontSize: '16px',
-      overflow: 'hidden',
     },
   },
 })

@@ -27,7 +27,7 @@ export const AccordionContainer = styled('div', {
   display: 'flex',
   justifyContent: 'space-between',
 
-  '@breakpoint1': {
+  '@mobile': {
     flexDirection: 'column',
     gap: '3rem',
   },
@@ -61,7 +61,7 @@ export const AccordionTrigger = styled(Accordion.Trigger, {
 
   '&:hover': {
     cursor: 'pointer',
-    boxShadow: '2px 10px 10px 5px rgba(5, 191, 219, 0.5)',
+    boxShadow: '2px 10px 10px 5px rgba(63, 0, 113, 0.5)',
   },
 })
 
@@ -101,5 +101,9 @@ export const AccordionContent = styled(Accordion.Content, {
 
   '&[data-state="closed"]': {
     animation: `${opacityUp} 500ms forwards`,
+  },
+
+  '@mobile': {
+    maxWidth: '100%',
   },
 })

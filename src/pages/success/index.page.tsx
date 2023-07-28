@@ -4,10 +4,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { stripe } from '@/lib/stripe'
-import { PurchasedProducts } from './@types/PurchasedProducts'
+import { ShoppingCart } from 'phosphor-react'
 
 import { SuccessContainer, SuccessProduct, SuccessProducts } from './style'
-import { ShoppingCart } from 'phosphor-react'
+
+interface PurchasedProducts {
+  customerName: string
+  products: {
+    id: string
+    name: string
+    images: string
+  }[]
+}
 
 export default function Success({ customerName, products }: PurchasedProducts) {
   return (

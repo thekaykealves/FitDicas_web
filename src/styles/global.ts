@@ -27,9 +27,13 @@ export const globalStyles = globalCss({
     paddingBlock: '6rem',
     height: 'calc(100vh - 13rem)',
 
-    '@breakpoint1': {
+    '@mobile': {
       paddingBlock: '3rem',
       paddingInline: '2rem',
+    },
+
+    '@ultrawide': {
+      paddingInline: '20rem',
     },
   },
 
@@ -52,7 +56,7 @@ export const BackToTopButton = styled('a', {
   transition: '0.3s',
   cursor: 'auto',
 
-  '@breakpoint1': {
+  '@mobile': {
     right: '2rem',
     bottom: '2rem',
   },

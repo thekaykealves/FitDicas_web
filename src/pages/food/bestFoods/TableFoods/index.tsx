@@ -1,18 +1,26 @@
 import { useEffect, useState } from 'react'
 
+import { api } from '@/lib/axios'
+
 import { TableFoodsContainer } from './styles'
 
-import { FoodProps } from '../../@types/Food'
-import { api } from '@/lib/axios'
+interface FoodProps {
+  id: string
+  name: string
+  quantity: string
+  protein: string
+  calories: string
+  type: string
+}
 
 interface TableFoodsProps {
   type: 'meats' | 'fruits' | 'supplements'
 }
 
 export function TableFoods({ type }: TableFoodsProps) {
-  const [foods, setFoods] = useState<FoodProps[]>()
+  const [foods, setFoods] = useState<FoodProps[]>([])
 
-  async function FetchFoods() {
+  async function fetchFoods() {
     const response = await api.get('/foods')
     const typesOfFoods = response.data
 
@@ -22,7 +30,7 @@ export function TableFoods({ type }: TableFoodsProps) {
   }
 
   useEffect(() => {
-    FetchFoods()
+    fetchFoods()
   }, [])
 
   return (
@@ -32,9 +40,11 @@ export function TableFoods({ type }: TableFoodsProps) {
           <tr>
             <th>Nome</th>
             <th>Quantidade</th>
-            {type === 'meats' && <th>Proteínas</th>}
-            {type === 'supplements' && <th>Proteínas</th>}
-            {type === 'fruits' && <th>Calorias</th>}
+            {type === 'meats' || type === 'supplements' ? (
+              <th>Proteínas</th>
+            ) : (
+              <th>Calorias</th>
+            )}
           </tr>
         </thead>
         <tbody>
@@ -43,9 +53,11 @@ export function TableFoods({ type }: TableFoodsProps) {
               <tr key={food.id}>
                 <td>{food.name}</td>
                 <td>{food.quantity}</td>
-                {type === 'meats' && <td>{food.protein}</td>}
-                {type === 'fruits' && <td>{food.calories}</td>}
-                {type === 'supplements' && <td>{food.protein}</td>}
+                {type === 'meats' || type === 'supplements' ? (
+                  <td>{food.protein}</td>
+                ) : (
+                  <td>{food.calories}</td>
+                )}
               </tr>
             )
           })}

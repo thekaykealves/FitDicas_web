@@ -1,5 +1,10 @@
 import Head from 'next/head'
 
+import { ArrowRight } from 'phosphor-react'
+
+import { BestFoods } from './bestFoods'
+import { Layout } from '../components/layout'
+
 import {
   CardDiet,
   CardsContainer,
@@ -7,11 +12,6 @@ import {
   DietContainer,
   FoodContainer,
 } from './styles'
-
-import { ArrowRight } from 'phosphor-react'
-
-import { BestFoods } from './bestFoods'
-import { Layout } from '../components/layout'
 import { Separator } from '@/styles/global'
 
 export default function Food() {
@@ -56,9 +56,7 @@ export default function Food() {
 
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequatur eos laboriosam tenetur sit cum ex voluptate expedita
-                numquam officia iste non possimus a incidunt, maiores excepturi
-                aperiam sapiente mollitia totam!
+                Consequatur eos laboriosam
               </p>
 
               <span>- Gordura ♨️</span>

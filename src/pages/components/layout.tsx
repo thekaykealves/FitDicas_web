@@ -1,17 +1,24 @@
-import { BackToTopButton } from '@/styles/global'
+import { ReactNode, useEffect, useState } from 'react'
+
 import { Footer } from './Footer'
-import { ArrowUp } from 'phosphor-react'
-import { useEffect, useState } from 'react'
 import { Header } from './Header'
 
-export function Layout({ children }: any) {
-  const [buttonVisibility, setButtonVisibility] = useState(false)
+import { ArrowUp } from 'phosphor-react'
+
+import { BackToTopButton } from '@/styles/global'
+
+interface LayoutProps {
+  children: ReactNode
+}
+
+export function Layout({ children }: LayoutProps) {
+  const [isButtonVisibility, setIsButtonVisibility] = useState(false)
 
   function backToTop() {
     if (window.scrollY >= 300) {
-      setButtonVisibility(true)
+      setIsButtonVisibility(true)
     } else {
-      setButtonVisibility(false)
+      setIsButtonVisibility(false)
     }
   }
 
@@ -32,8 +39,8 @@ export function Layout({ children }: any) {
       <BackToTopButton
         href="#"
         css={{
-          opacity: buttonVisibility ? '1' : '0',
-          cursor: buttonVisibility ? 'pointer' : '',
+          opacity: isButtonVisibility ? '1' : '0',
+          cursor: isButtonVisibility ? 'pointer' : '',
         }}
       >
         <ArrowUp weight="bold" />

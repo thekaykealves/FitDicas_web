@@ -3,7 +3,6 @@ import * as Toast from '@radix-ui/react-toast'
 import { keyframes, styled } from '@/styles'
 
 export const CardsProductContainer = styled('div', {
-  width: '100%',
   display: 'flex',
   flexWrap: 'wrap',
   alignItems: 'center',
@@ -46,6 +45,10 @@ export const CardProduct = styled('div', {
       opacity: 0.8,
       cursor: 'pointer',
     },
+  },
+
+  '@mobile': {
+    width: '300px',
   },
 })
 

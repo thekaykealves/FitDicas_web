@@ -14,40 +14,40 @@ export function Benefits() {
           <strong>Saúde</strong>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-            dignissimos accusantium{' '}
+            dignissimos accusantium
           </p>
         </BenefitBox>
 
         <BenefitBox>
           <div>
-            <Brain />
+            <Brain weight="bold" />
           </div>
           <strong>Saúde mental</strong>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-            dignissimos accusantium{' '}
+            dignissimos accusantium
           </p>
         </BenefitBox>
 
         <BenefitBox>
           <div>
-            <PersonSimpleRun />
+            <PersonSimpleRun weight="fill" />
           </div>
           <strong>Disposição</strong>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-            dignissimos accusantium{' '}
+            dignissimos accusantium
           </p>
         </BenefitBox>
 
         <BenefitBox>
           <div>
-            <Person />
+            <Person weight="fill" />
           </div>
           <strong>Corpo + bonito</strong>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-            dignissimos accusantium{' '}
+            dignissimos accusantium
           </p>
         </BenefitBox>
       </BenefitsWrapper>

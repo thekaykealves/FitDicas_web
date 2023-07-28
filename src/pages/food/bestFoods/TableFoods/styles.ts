@@ -4,6 +4,7 @@ export const TableFoodsContainer = styled('table', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
+  justifyContent: 'center',
 
   div: {
     border: '1px solid $white',

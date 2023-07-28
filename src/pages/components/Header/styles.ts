@@ -20,7 +20,7 @@ export const HeaderWrapper = styled('header', {
 
   transition: 'backgroundColor 0.5s ease-in-out',
 
-  backgroundColor: 'rgba(14, 41, 84, 0.9)',
+  backgroundColor: 'rgba(21, 0, 80, 0.9)',
   backdropFilter: 'blur(10px)',
 })
 
@@ -46,6 +46,14 @@ export const HeaderContainer = styled('div', {
     '&:hover': {
       opacity: 0.8,
     },
+  },
+
+  '@mobile': {
+    paddingInline: '1rem',
+  },
+
+  '@ultrawide': {
+    paddingInline: '20rem',
   },
 })
 
@@ -84,7 +92,7 @@ export const HeaderItem = styled(NavigationMenu.Item, {
     },
   },
 
-  '@breakpoint1': {
+  '@mobile': {
     button: {
       fontSize: '14px',
     },
@@ -105,14 +113,13 @@ export const HeaderContent = styled(NavigationMenu.Content, {
     gap: '0.3rem',
     flexDirection: 'column',
     listStyle: 'none',
-    backgroundColor: 'rgba(14, 41, 84, 0.9)',
+    backgroundColor: 'rgba(21, 0, 80, 0.9)',
     backdropFilter: 'blur(150px)',
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
     padding: '1rem',
 
     li: {
-      width: '100%',
       transition: 'all 200ms ease-in-out',
 
       '&:hover': {
@@ -124,6 +131,7 @@ export const HeaderContent = styled(NavigationMenu.Content, {
     },
 
     a: {
+      width: '100%',
       textDecoration: 'none',
       color: '$white',
     },
@@ -136,7 +144,7 @@ export const HeaderContent = styled(NavigationMenu.Content, {
 
   '&[data-state="closed"]': { animation: `${fadeOut} 200ms ease` },
 
-  '@breakpoint1': {
+  '@mobile': {
     fontSize: '14px',
 
     ul: {

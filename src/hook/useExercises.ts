@@ -1,6 +1,6 @@
+import { useEffect, useState } from 'react'
 import { api } from '@/lib/axios'
 import { ExercisesProps } from '@/pages/exercises/@types/exercises'
-import { useEffect, useState } from 'react'
 
 export default function useExercises(name: string) {
   const [exercises, setExercises] = useState<ExercisesProps[]>([])

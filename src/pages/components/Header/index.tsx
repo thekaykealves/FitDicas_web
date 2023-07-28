@@ -5,7 +5,7 @@ import { ShoppingCartComponent } from '../ShoppingCart'
 
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import { useShoppingCart } from 'use-shopping-cart'
-import { ArrowLeft } from 'phosphor-react'
+import { House } from 'phosphor-react'
 
 import {
   HeaderContainer,
@@ -27,7 +27,7 @@ export function Header() {
       <HeaderContainer className="container">
         {asPath !== '/' && asPath !== '/#' ? (
           <Link href="/">
-            <ArrowLeft size={32} />
+            <House size={32} />
           </Link>
         ) : null}
 
@@ -48,26 +48,18 @@ export function Header() {
             <NavigationMenu.Trigger>Alimentação</NavigationMenu.Trigger>
             <HeaderContent>
               <ul>
-                <li>
-                  <Link prefetch={false} href="/food">
-                    + Sobre Alimentação
-                  </Link>
-                </li>
-                <li>
-                  <Link prefetch={false} href="/food#DefictAndAfictCaloric">
-                    Déficit e Superávit
-                  </Link>
-                </li>
-                <li>
-                  <Link prefetch={false} href="/food#Diet">
-                    Dieta
-                  </Link>
-                </li>
-                <li>
-                  <Link prefetch={false} href="/food#bestFoods">
-                    Melhores alimentos
-                  </Link>
-                </li>
+                <Link prefetch={false} href="/food">
+                  <li>+ Sobre Alimentação</li>
+                </Link>
+                <Link prefetch={false} href="/food#DefictAndAfictCaloric">
+                  <li>Déficit e Superávit</li>
+                </Link>
+                <Link prefetch={false} href="/food#Diet">
+                  <li>Dieta</li>
+                </Link>
+                <Link prefetch={false} href="/food#bestFoods">
+                  <li>Melhores alimentos</li>
+                </Link>
               </ul>
             </HeaderContent>
           </HeaderItem>
@@ -76,36 +68,24 @@ export function Header() {
             <NavigationMenu.Trigger>Exercícios</NavigationMenu.Trigger>
             <HeaderContent>
               <ul>
-                <li>
-                  <Link prefetch={false} href="/exercises/biceps">
-                    Bíceps
-                  </Link>
-                </li>
-                <li>
-                  <Link prefetch={false} href="/exercises/triceps">
-                    Tríceps
-                  </Link>
-                </li>
-                <li>
-                  <Link prefetch={false} href="/exercises/back">
-                    Costas
-                  </Link>
-                </li>
-                <li>
-                  <Link prefetch={false} href="/exercises/breastplate">
-                    Peitoral
-                  </Link>
-                </li>
-                <li>
-                  <Link prefetch={false} href="/exercises/legs">
-                    Pernas
-                  </Link>
-                </li>
-                <li>
-                  <Link prefetch={false} href="/exercises/abdomen">
-                    Abdômen
-                  </Link>
-                </li>
+                <Link prefetch={false} href="/exercises/biceps">
+                  <li>Bíceps</li>
+                </Link>
+                <Link prefetch={false} href="/exercises/triceps">
+                  <li>Tríceps</li>
+                </Link>
+                <Link prefetch={false} href="/exercises/back">
+                  <li>Costas</li>
+                </Link>
+                <Link prefetch={false} href="/exercises/breastplate">
+                  <li>Peitoral</li>
+                </Link>
+                <Link prefetch={false} href="/exercises/legs">
+                  <li>Pernas</li>
+                </Link>
+                <Link prefetch={false} href="/exercises/abdomen">
+                  <li>Abdômen</li>
+                </Link>
               </ul>
             </HeaderContent>
           </HeaderItem>
@@ -114,11 +94,9 @@ export function Header() {
             <NavigationMenu.Trigger>Foco</NavigationMenu.Trigger>
             <HeaderContent>
               <ul>
-                <li>
-                  <Link prefetch={false} href="/focus">
-                    Como ter + foco
-                  </Link>
-                </li>
+                <Link prefetch={false} href="/focus">
+                  <li>Como ter + foco</li>
+                </Link>
               </ul>
             </HeaderContent>
           </HeaderItem>
@@ -127,11 +105,9 @@ export function Header() {
             <NavigationMenu.Trigger>Rotina</NavigationMenu.Trigger>
             <HeaderContent>
               <ul>
-                <li>
-                  <Link prefetch={false} href="/routine">
-                    Como planejar uma rotina
-                  </Link>
-                </li>
+                <Link prefetch={false} href="/routine">
+                  <li>Como planejar uma rotina</li>
+                </Link>
               </ul>
             </HeaderContent>
           </HeaderItem>
@@ -140,26 +116,18 @@ export function Header() {
             <NavigationMenu.Trigger>Suplementação</NavigationMenu.Trigger>
             <HeaderContent>
               <ul>
-                <li>
-                  <Link prefetch={false} href="/supplements">
-                    + Sobre suplementos
-                  </Link>
-                </li>
-                <li>
-                  <Link prefetch={false} href="/supplements#aboutSupplements">
-                    Whey Protein
-                  </Link>
-                </li>
-                <li>
-                  <Link prefetch={false} href="/supplements#aboutSupplements">
-                    Creatina
-                  </Link>
-                </li>
-                <li>
-                  <Link prefetch={false} href="/supplements#productCatalog">
-                    Comprar suplementos
-                  </Link>
-                </li>
+                <Link prefetch={false} href="/supplements">
+                  <li>+ Sobre suplementos</li>
+                </Link>
+                <Link prefetch={false} href="/supplements#aboutSupplements">
+                  <li>Whey Protein</li>
+                </Link>
+                <Link prefetch={false} href="/supplements#aboutSupplements">
+                  <li>Creatina</li>
+                </Link>
+                <Link prefetch={false} href="/supplements#productCatalog">
+                  <li>Comprar suplementos</li>
+                </Link>
               </ul>
             </HeaderContent>
           </HeaderItem>

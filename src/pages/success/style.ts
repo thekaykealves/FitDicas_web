@@ -10,7 +10,7 @@ export const SuccessContainer = styled('div', {
   gap: '30px',
 
   background:
-    'linear-gradient(356deg, rgba(46,138,153,1) 0%, rgba(14,41,84,1) 50%)',
+    'linear-gradient(356deg, rgba(0, 0, 0, 1) 0%, rgba(21, 0, 80, 1) 50%)',
 
   h1: {
     display: 'flex',

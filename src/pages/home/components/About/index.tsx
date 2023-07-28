@@ -1,4 +1,5 @@
 import { Barbell, Clock, ForkKnife } from 'phosphor-react'
+
 import {
   AboutContainer,
   AboutIcon,

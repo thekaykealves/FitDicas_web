@@ -1,4 +1,12 @@
+import { useState } from 'react'
+
 import Image from 'next/image'
+
+import axios from 'axios'
+
+import { useShoppingCart } from 'use-shopping-cart'
+import { CartEntry } from 'use-shopping-cart/core'
+import { X } from 'phosphor-react'
 
 import {
   SidebarContainer,
@@ -8,14 +16,6 @@ import {
   ProductPrice,
   SidebarButton,
 } from './style'
-
-import { useState } from 'react'
-
-import axios from 'axios'
-
-import { useShoppingCart } from 'use-shopping-cart'
-import { X } from 'phosphor-react'
-import { CartEntry } from 'use-shopping-cart/core'
 
 interface SidebarProps {
   handleOpenAndCloseSidebar: () => void
@@ -63,24 +63,31 @@ export function SideBar({ handleOpenAndCloseSidebar }: SidebarProps) {
 
         {products.length > 0 ? (
           <SidebarProducts>
-            {products.map((product) => {
-              return (
-                <Product key={product.id}>
-                  <Image src={product.imageUrl} alt="" width={50} height={50} />
-                  <div>
-                    <span>{product.name}</span>
-                    <ProductPrice>
-                      <strong>{product.price}</strong>
-                      <div>
-                        <button onClick={() => removeItem(product.id)}>
-                          -
-                        </button>
-                      </div>
-                    </ProductPrice>
-                  </div>
-                </Product>
-              )
-            })}
+            <div>
+              {products.map((product) => {
+                return (
+                  <Product key={product.id}>
+                    <Image
+                      src={product.imageUrl}
+                      alt=""
+                      width={500}
+                      height={500}
+                    />
+                    <div>
+                      <span>{product.name}</span>
+                      <ProductPrice>
+                        <strong>{product.price}</strong>
+                        <div>
+                          <button onClick={() => removeItem(product.id)}>
+                            -
+                          </button>
+                        </div>
+                      </ProductPrice>
+                    </div>
+                  </Product>
+                )
+              })}
+            </div>
 
             <div>
               <SidebarButton onClick={() => clearCart()} color="red">

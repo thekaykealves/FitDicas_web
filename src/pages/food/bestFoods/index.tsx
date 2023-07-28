@@ -1,5 +1,9 @@
-// import Image from 'next/image'
 import Image from 'next/image'
+
+import * as Accordion from '@radix-ui/react-accordion'
+
+import { TableFoods } from './TableFoods'
+
 import {
   AccordionContainer,
   AccordionContent,
@@ -7,15 +11,11 @@ import {
   BestFoodsContainer,
   BestFoodsTitle,
 } from './styles'
-
-import * as Accordion from '@radix-ui/react-accordion'
+import { Separator } from '@/styles/global'
 
 import carneImg from '../../../assets/carnes.webp'
 import frutasImg from '../../../assets/frutas.avif'
 import suplementosImg from '../../../assets/sulementos.avif'
-
-import { TableFoods } from './components/TableFoods'
-import { Separator } from '@/styles/global'
 
 export function BestFoods() {
   return (

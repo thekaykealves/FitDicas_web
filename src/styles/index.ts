@@ -12,16 +12,16 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      'bg-color': '#0E2954',
-      'primary-color': '#1F6E8C',
-      'secondary-color': '#2E8A99',
-      'tertiary-color': '#73BBC9',
+      'bg-color': '#150050',
+      'primary-color': '#000000',
+      'secondary-color': '#3F0071',
+      'tertiary-color': '#FB2576',
 
       white: '#FFFFFF',
-      black: '#000000',
     },
   },
   media: {
-    breakpoint1: '(max-width: 768px)',
+    mobile: '(max-width: 768px)',
+    ultrawide: '(min-width: 1400px)',
   },
 })

@@ -6,15 +6,16 @@ export const FoodContainer = styled('main', {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
+  textAlign: 'center',
 
   h1: {
-    fontSize: '40px',
+    fontSize: '3rem',
     marginBottom: '100px',
   },
 
   p: {
-    fontSize: '20px',
-    width: '75%',
+    fontSize: '1.5rem',
+    width: '100%',
   },
 
   div: {
@@ -24,17 +25,11 @@ export const FoodContainer = styled('main', {
     justifyContent: 'center',
   },
 
-  '@breakpoint1': {
+  '@mobile': {
     height: '100%',
-    paddingBlock: '3rem',
 
     h1: {
-      fontSize: '30px',
       margin: 0,
-    },
-
-    p: {
-      fontSize: '20px',
     },
 
     div: {
@@ -62,7 +57,7 @@ export const CardsContainer = styled('div', {
 
   backgroundColor: '$primary-color',
 
-  '@breakpoint1': {
+  '@mobile': {
     flexDirection: 'column',
     gap: '3rem',
     height: '500px',
@@ -88,6 +83,7 @@ export const CardDiet = styled('div', {
   justifyContent: 'space-around',
   backgroundColor: '$bg-color',
   borderRadius: 8,
+  textAlign: 'center',
 
   strong: {
     fontSize: '25px',
@@ -99,11 +95,11 @@ export const CardDiet = styled('div', {
     animation: `${toFloat} 2s ease-in-out infinite`,
   },
 
-  '@breakpoint1': {
+  '@mobile': {
     height: '200px',
 
     span: {
-      fontSize: '18px',
+      fontSize: '1.125rem',
     },
   },
 })
@@ -127,7 +123,7 @@ export const DietContainer = styled('div', {
     width: '50%',
   },
 
-  '@breakpoint1': {
+  '@mobile': {
     paddingBlock: '3rem',
     height: '100%',
     flexDirection: 'column',

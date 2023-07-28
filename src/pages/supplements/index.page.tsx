@@ -6,6 +6,9 @@ import { stripe } from '@/lib/stripe'
 
 import { SupplementsProps } from './@types/Supplements'
 
+import { Products } from './Products'
+import { Layout } from '../components/layout'
+
 import {
   Card,
   CardsContainer,
@@ -13,9 +16,6 @@ import {
   ProductsContainer,
   SupplementsContainer,
 } from './styles'
-
-import { Products } from './components/Products'
-import { Layout } from '../components/layout'
 import { Separator } from '@/styles/global'
 
 export default function Supplements({ products }: SupplementsProps) {
@@ -35,9 +35,6 @@ export default function Supplements({ products }: SupplementsProps) {
               quos nemo cumque adipisci laudantium unde error tempora, omnis
               quas aut voluptatibus asperiores non et, in, at sed ducimus amet
               ex! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatem, officiis dolorum. Ducimus nulla accusantium libero
-              debitis! Voluptatum pariatur minus, non sapiente, adipisci facilis
-              maiores quidem neque omnis, praesentium similique iure!
             </p>
           </div>
         </SupplementsContainer>
@@ -51,8 +48,6 @@ export default function Supplements({ products }: SupplementsProps) {
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
                 velit impedit doloremque. Eveniet quod, eius tempore rem odit
-                alias blanditiis? Nisi, minus eveniet accusamus harum commodi
-                voluptatem quod praesentium dolorum!
               </p>
 
               <span>+ Massa muscular 💪</span>
@@ -63,8 +58,6 @@ export default function Supplements({ products }: SupplementsProps) {
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptatibus ex corporis magnam possimus labore fugit nihil
-                asperiores atque ipsum libero aliquid praesentium dolorum, iste
-                ea quo placeat, rerum facilis veniam?
               </p>
 
               <span>+ Força 💪</span>
