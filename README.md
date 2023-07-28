@@ -1,5 +1,12 @@
 <h1 align="center">FitDicas 💪</h1>
 
+### Desktop
+![desktop-2](https://github.com/thekaykealves/FitDicas_web/assets/85270764/ab0b6f7c-ffbf-426e-84f8-9e2a071e30c0)
+
+
+### Mobile
+
+
 ## Sobre o projeto 🔥
 
 FitDicas é um website construído para ajudar pessoas que querem ingressar no mundo fitness!
