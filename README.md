@@ -53,4 +53,24 @@ Projeto desenvolvido com finalidade aos estudos.
   </li>
 </ul>
 
+### Como contribuir com esse projeto ? 💡
+
+``` bash
+ # Clone este repositório
+ $ git clone https://github.com/thekaykealves/coffee-delivery
+
+ # Acesse a pasta do projeto no terminal/cmd
+ $ cd FitDicas_web
+ 
+ # Instale todas as dependências
+ $ npm install
+ 
+ # Execute a aplicação em modo de desenvolvimento
+ $ npm run dev
+ 
+ # A aplicação estará rodando na porta 3000
+ # Acesse http://localhost:3000
+```
+
+
 <h2 align="center">Desenvolvido por Kayke Alves 🤓</h2>
