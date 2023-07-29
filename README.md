@@ -20,7 +20,7 @@ Contendo dicas, explicações e uma "loja" para a compra de suplementos através
 Projeto desenvolvido com finalidade aos estudos.
 
 ## Veja você mesmo 👇
-<a href="https://fit-dicas-web.vercel.app/">Acesse o projeto clicando aqui!</a>
+<a href="https://fit-dicas-web.vercel.app/" target="_blank">Acesse o projeto clicando aqui!</a>
 
 ## Tecnologias 👩‍💻
 <ul>
