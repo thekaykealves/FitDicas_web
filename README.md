@@ -2,15 +2,15 @@
 
 ### Desktop 🖥️
 
-![desktop-2](https://github.com/thekaykealves/FitDicas_web/assets/85270764/ab0b6f7c-ffbf-426e-84f8-9e2a071e30c0)
+![desktop-2](https://github.com/thekaykealves/FitDicas_web/assets/85270764/4594bddf-3d17-49f0-bda7-b0c3a4fd279e)
 
 
-![desktop-1](https://github.com/thekaykealves/FitDicas_web/assets/85270764/91c2b424-88f0-451b-801d-36a7ce81fccc)
+![desktop-1](https://github.com/thekaykealves/FitDicas_web/assets/85270764/4efdab26-a6b5-4361-bd16-9252d4928485)
 
 
 ### Mobile 📱
-![mobile-exercise](https://github.com/thekaykealves/FitDicas_web/assets/85270764/b450d52f-e8e8-4532-ab35-54640b01d7af)
-![mobile-sidebar](https://github.com/thekaykealves/FitDicas_web/assets/85270764/1303fe2d-7cf4-48df-a2d6-bbb07a6eb5c5)
+![mobile-exercise](https://github.com/thekaykealves/FitDicas_web/assets/85270764/843146e8-3f17-407a-aca3-5a851f8008d7)
+![mobile-sidebar](https://github.com/thekaykealves/FitDicas_web/assets/85270764/a4bd7eef-0bb3-41e2-a3f7-21853c37fcc6)
 
 ## Sobre o projeto 🔥
 
@@ -18,6 +18,9 @@ FitDicas é um website construído para ajudar pessoas que querem ingressar no m
 Contendo dicas, explicações e uma "loja" para a compra de suplementos através do Stripe.
 
 Projeto desenvolvido com finalidade aos estudos.
+
+## Veja você mesmo 👇
+<a href="https://fit-dicas-web.vercel.app/">Acesse o projeto clicando aqui!</a>
 
 ## Tecnologias 👩‍💻
 <ul>
