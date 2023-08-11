@@ -14,7 +14,7 @@
 
 ## Sobre o projeto 🔥
 
-FitDicas é um website construído para ajudar pessoas que querem ingressar no mundo fitness!
+FitDicas é um website com mini-ecommerce construído para ajudar pessoas que querem ingressar no mundo fitness!
 Contendo dicas, explicações e uma "loja" para a compra de suplementos através do Stripe.
 
 Projeto desenvolvido com finalidade aos estudos.
