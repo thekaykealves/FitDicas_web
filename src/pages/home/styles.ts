@@ -48,6 +48,7 @@ export const HomeTextContainer = styled('div', {
   },
 
   '@mobile': {
+    textAlign: 'center',
     width: '100%',
     alignItems: 'center',
 

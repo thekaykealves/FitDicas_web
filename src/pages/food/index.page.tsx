@@ -12,6 +12,7 @@ import {
   DietContainer,
   FoodContainer,
 } from './styles'
+
 import { Separator } from '@/styles/global'
 
 export default function Food() {

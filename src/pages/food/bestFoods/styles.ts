@@ -63,6 +63,10 @@ export const AccordionTrigger = styled(Accordion.Trigger, {
     cursor: 'pointer',
     boxShadow: '2px 10px 10px 5px rgba(63, 0, 113, 0.5)',
   },
+
+  '@mobile': {
+    width: '100%',
+  },
 })
 
 const opacityDown = keyframes({

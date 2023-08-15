@@ -19,7 +19,7 @@ export const Container = styled('div', {
 })
 
 export const Exercises = styled('div', {
-  height: '100%,',
+  height: '100%',
 
   h4: {
     fontSize: '30px',

@@ -39,14 +39,11 @@ export function About() {
         </AboutIconsWrapper>
 
         <AboutText>
-          <h3>
-            <strong>O que é &quot;Ser Fitness&quot; ?</strong>
-          </h3>
+          <h3>O que é &quot;Ser Fitness&quot; ?</h3>
 
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt ipsa
-            incidunt placeat explicabo veritatis nesciunt est voluptate sed
-            minus aliquam molestias dolorem nisi, eos, ipsam beatae sint quam
+            incidunt placeat explicabo veritatis nesciunt est voluptate
           </p>
         </AboutText>
       </AboutWrapper>

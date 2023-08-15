@@ -62,6 +62,10 @@ export const Div = styled('div', {
 
   a: {
     textDecoration: 'none',
+
+    '@mobile': {
+      fontSize: '1.5rem',
+    },
   },
 })
 
@@ -90,11 +94,10 @@ export const HeaderItem = styled(NavigationMenu.Item, {
     '&[data-state="open"]': {
       filter: 'brightness(1.10)',
     },
-  },
 
-  '@mobile': {
-    button: {
-      fontSize: '14px',
+    '@mobile': {
+      padding: '0.1rem',
+      fontSize: 12,
     },
   },
 })

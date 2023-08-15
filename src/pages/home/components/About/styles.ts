@@ -18,6 +18,10 @@ export const AboutContainer = styled('div', {
   },
 
   '@mobile': {
+    height: '100%',
+    marginBlock: '3rem',
+    overflow: 'visible',
+
     'div#left-circle': {
       left: -120,
     },
@@ -35,7 +39,7 @@ export const AboutWrapper = styled('div', {
   height: '100%',
 
   '@mobile': {
-    flexDirection: 'column',
+    flexDirection: 'column-reverse',
   },
 })
 
@@ -94,5 +98,10 @@ export const AboutText = styled('div', {
   '@mobile': {
     width: '100%',
     textAlign: 'center',
+    marginBottom: '3rem',
+
+    p: {
+      fontSize: '1.5rem',
+    },
   },
 })

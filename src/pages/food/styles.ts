@@ -60,7 +60,6 @@ export const CardsContainer = styled('div', {
   '@mobile': {
     flexDirection: 'column',
     gap: '3rem',
-    height: '500px',
   },
 })
 
@@ -96,7 +95,8 @@ export const CardDiet = styled('div', {
   },
 
   '@mobile': {
-    height: '200px',
+    width: '90%',
+    height: '250px',
 
     span: {
       fontSize: '1.125rem',

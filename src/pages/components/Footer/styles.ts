@@ -29,7 +29,7 @@ export const FooterContainer = styled('footer', {
 
     'div:first-child': {
       a: {
-        fontSize: '30px',
+        fontSize: '1.5rem',
       },
 
       p: {

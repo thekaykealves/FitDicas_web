@@ -20,16 +20,14 @@ export function ShoppingCartComponent({ visible }: ShoppingCartComponentProps) {
 
   return (
     <>
-      {visible && (
-        <ShoppingCartContainer onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-          <ShoppingCart size={32} />
-          {cartCount! !== 0 ? (
-            <QuantityOfProducts>
-              <span>{cartCount}</span>
-            </QuantityOfProducts>
-          ) : null}
-        </ShoppingCartContainer>
-      )}
+      <ShoppingCartContainer onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+        <ShoppingCart size={32} />
+        {cartCount! !== 0 ? (
+          <QuantityOfProducts>
+            <span>{cartCount}</span>
+          </QuantityOfProducts>
+        ) : null}
+      </ShoppingCartContainer>
 
       {isSidebarOpen && (
         <SideBar handleOpenAndCloseSidebar={handleOpenAndCloseSidebar} />

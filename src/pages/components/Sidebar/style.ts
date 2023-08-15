@@ -40,6 +40,10 @@ export const SidebarWrapper = styled('div', {
 
   strong: {
     fontSize: '20px',
+
+    '@mobile': {
+      fontSize: '18px',
+    },
   },
 
   svg: {
