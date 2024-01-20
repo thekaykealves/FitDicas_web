@@ -1,10 +1,13 @@
-<h1 align="center">FitDicas 💪</h1>
+<h1 align="center">FitDicas 💪🏾</h1>
 
 ## Sobre o projeto 🔥
 FitDicas é um website construído para ajudar pessoas que querem ingressar no mundo fitness!
 Contendo dicas, explicações e um "mini-ecommerce" para a compra de suplementos através do Stripe.
 
 Projeto desenvolvido com finalidade aos estudos.
+
+### Acesse o projeto 👇🏾
+https://fit-dicas-web.vercel.app/
 
 # Desktop
 ![desktop-2](https://github.com/thekaykealves/FitDicas_web/assets/85270764/1154ff7e-2ab7-4e29-9a32-cc469473d546)
